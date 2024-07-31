@@ -1,0 +1,116 @@
+@import './../../../styles.scss';
+
+.width {
+    width: 50%;
+}
+
+.about-me_div {
+    gap: 16px;
+    padding-left: 16px;
+    padding-top: 16px;
+}
+
+section {
+    width: 100%;
+    @include d-flex();
+    padding-left: 5rem;
+    padding-top: 3rem;
+    position: relative;
+    overflow-x: hidden;
+}
+
+h2 {
+    font-family: 'Poppins';
+    font-weight: bold;
+    font-size: 4rem;
+}
+
+.about-me_frame {
+    @include d-flex();
+    gap: 1.5rem;
+    flex-direction: column;
+    position: relative;
+    z-index: 14;
+    img {
+        height: 100%;
+        min-width: 48px;
+    }
+}
+
+.vektor {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    top: -16px;
+    right: 0;
+    z-index: 13;
+    object-fit: contain;
+}
+
+.picture_frame {
+    @include d-flex();
+    padding-left: 5.5rem;
+    z-index: 14;
+    position: relative;
+    img {
+        height: 320px;
+        width: 320px;
+        border-radius: 50%;
+        object-fit: cover;
+        object-position: 10px 0px;
+        border: 3px solid $green;
+    }
+
+    .green-stick {
+        flex-grow: 1;
+        height: 3px;
+        background-color: $green;
+    }
+}
+
+@media (max-width: 1200px) {
+    section {
+        flex-direction: column;
+        @include site-padding();
+    }
+
+    .about-me_frame {
+        width: 100%;
+    }
+}
+
+@media (max-width:860px) {
+    .about-me_frame {
+        img {
+            height: 100%;
+            min-width: 36px;
+        }
+    }
+}
+
+@media (max-width:720px) {
+    section {
+        @include site-padding(2rem);
+    }
+}
+
+@media (max-width:520px) {
+    section {
+        @include site-padding(1rem);
+        padding-left: 0px!important;
+    }
+
+    .title_frame {
+        padding-left: 1rem;
+    }
+}
+
+@media (max-width:420px) {
+    .description {
+        font-size: 14px;
+    }
+
+    .title {
+        font-size: 42px;
+    }
+}

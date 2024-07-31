@@ -1,0 +1,62 @@
+<section>
+    <div class="bg-imgs">
+        <div class="profile-hero-frame">
+            <div class="profile-picture-frame">
+                <img class="profile-img" src="assets/imgs/portofolio-foto.svg" alt="">
+
+                <img class="vektor-purple" src="/assets/bg-graphics/purple-shadow-small-signle-2.svg" alt="">
+                <img class="vektor-green" src="/assets/bg-graphics/green-shadow-small-signle-2.svg" alt="">
+                <div #mobileVektor [ngClass]="{'d-none': windowWidth > 1200}" class="profile-vektor-frame vektor-mobile">
+                    <div class="vektor vektor-mobile">
+                        <div class="social-media_container social-media-icons-mobile">
+                            <div class="violett-stick"></div>
+                            <img src="/assets/imgs/icons/social-media/github-small.svg" alt="github">
+                            <img src="/assets/imgs/icons/social-media/mail-small.svg" alt="e-mail">
+                            <img src="/assets/imgs/icons/social-media/linked-in-small.svg" alt="linked-in">
+                        </div>
+                        <div #mobileTitle class="mobile-title" [ngClass]="{'d-none': windowWidth > 1200}">
+                            <div class="main-title">
+                                <div class="title-frame">
+                                    <div class="i-am">
+                                        <span class="i-am_font-size">I am</span>
+                                    </div>
+                                    <div>
+                                        <h1 class="title_font-size bold">Andre Karyoti</h1>
+                                        <h2 class="purple-font title-h2_font-size">Frontend Developer</h2>
+                                    </div>
+                                </div>
+                                <button class="button_primary">Let's Talk!</button>
+                            </div>
+                            <div class="space-30"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div #desktopTitle [ngClass]="{'d-none': windowWidth < 1200}" class="profile-title">
+                <div class="main-title">
+                    <div class="title-frame">
+                        <div class="i-am">
+                            <span class="i-am_font-size">I am</span>
+                        </div>
+                        <div>
+                            <h1 class="title_font-size bold">Andre Karyoti</h1>
+                            <h2 class="purple-font title-h2_font-size">Frontend Developer</h2>
+                        </div>
+                    </div>
+                    <button class="button_primary">Let's Talk!</button>
+                </div>
+                <div class="space-30"></div>
+            </div>
+            <div #dekstopVektor [ngClass]="{'d-none': windowWidth < 1200}" class="profile-vektor-frame">
+                <div class="vektor vektor-desktop">
+                    <div class="social-media_container">
+                        <div class="violett-stick"></div>
+                        <img src="/assets/imgs/icons/social-media/github-small.svg" alt="github">
+                        <img src="/assets/imgs/icons/social-media/mail-small.svg" alt="e-mail">
+                        <img src="/assets/imgs/icons/social-media/linked-in-small.svg" alt="linked-in">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
