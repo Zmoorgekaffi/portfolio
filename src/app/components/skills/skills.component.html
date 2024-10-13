@@ -1,0 +1,33 @@
+<section class="site-padding">
+    <div #skillsLayout class="skills_layout">
+        @for (path of iconPaths; track $index) {
+            <div class="skill_img_container">
+                <img class="skill-img" src="{{path}}" alt="skill icon">
+            </div>
+        }
+        <div class="w100 d-none" style="margin-inline: auto;">
+            <button class="button_primary">
+                Get in touch
+            </button>
+        </div>
+    </div>
+    
+    <div class="skills_sub-container d-flex text-align-right">
+        <div class="title_frame">
+            <h2>My Skills</h2>
+        </div>
+
+        <div>
+            <p class="description">
+                I have gained experience in building projects with various front end technologies and concepts.
+            </p>
+        </div>
+
+        <div class="w100" style="margin-inline: auto;">
+            <button class="button_primary">
+                Get in touch
+            </button>
+        </div>
+        
+    </div>
+</section>

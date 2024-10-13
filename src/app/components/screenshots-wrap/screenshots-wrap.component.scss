@@ -1,0 +1,23 @@
+@import './../../../styles.scss';
+
+.portfolio-header-wrap {
+    @include d-flex(end, center);
+    gap: 2.5rem;
+}
+
+.stroke1 {
+    background-color: $violet;
+    height: 3px;
+    width: 6.813rem;
+}
+
+.stroke2 {
+    background-color: $violet;
+    height: 3px;
+    width: 30.25rem;
+}
+
+.projects-wrap {
+    @include d-flex();
+    flex-direction: column;
+}

@@ -16,13 +16,7 @@ section {
     padding-left: 5rem;
     padding-top: 3rem;
     position: relative;
-    overflow-x: hidden;
-}
-
-h2 {
-    font-family: 'Poppins';
-    font-weight: bold;
-    font-size: 4rem;
+    overflow-x: clip;
 }
 
 .about-me_frame {
@@ -40,9 +34,9 @@ h2 {
 .vektor {
     position: absolute;
     width: 50%;
-    height: 100%;
-    top: -16px;
-    right: 0;
+    height: 130%;
+    top: -20rem;
+    right: -20rem;
     z-index: 13;
     object-fit: contain;
 }
@@ -86,6 +80,10 @@ h2 {
             min-width: 36px;
         }
     }
+
+    .vektor {
+        right: -10rem;
+    }
 }
 
 @media (max-width:720px) {
@@ -102,15 +100,5 @@ h2 {
 
     .title_frame {
         padding-left: 1rem;
-    }
-}
-
-@media (max-width:420px) {
-    .description {
-        font-size: 14px;
-    }
-
-    .title {
-        font-size: 42px;
     }
 }

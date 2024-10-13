@@ -10,6 +10,8 @@ import { CommonModule } from '@angular/common';
 })
 export class AboutMeComponent {
  
+  lorem:string = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat debitis nulla nisi mollitia molestiae,dolor unde, rerum reprehenderit fugiat, cum beatae eos magni libero expedita nesciunt earum eaque omnis  soluta?';        
+               
   windowWidth;
   constructor() {
     this.windowWidth = window.innerWidth;
@@ -17,8 +19,6 @@ export class AboutMeComponent {
   
   @HostListener('window:resize', ['$event'])
   onResize(event: Event) {    
-    this.windowWidth = window.innerWidth;
-    console.log(this.windowWidth);
-    
+    this.windowWidth = window.innerWidth;    
   }
 }

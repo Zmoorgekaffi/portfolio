@@ -1,0 +1,15 @@
+<section class="site-padding">
+    <div class="d-flex" style="gap: 2rem; flex-direction: column;">
+        <div class="w100 portfolio-header-wrap">
+            <div class="stroke1"></div>
+            <h2>Portfolio</h2>
+            <div class="stroke2"></div>
+        </div>
+        <div class="w100 d-flex"><p class="description">Explore a selection of my work here - Interact with projects to see my skills in action.</p></div>
+    </div>
+    <div class="projects-wrap w100">
+        @for (project of projects; track project; let i = $index) {
+            <app-project-component class="w100" [parentIndex]="i" [projectInfo]="projects[i]"></app-project-component>
+        }
+    </div>
+</section>
