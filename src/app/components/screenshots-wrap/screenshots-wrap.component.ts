@@ -14,7 +14,7 @@ export class ScreenshotsWrapComponent {
 
   projects = [
     {
-      imgSrc: '/assets/imgs/project-imgs/join.png',
+      imgSrc: 'assets/imgs/project-imgs/join.png',
       title: 'join',
       tech: 'Angular | TypeScript | HTML | CSS | Firebase',
       description: 'Task manager inspired by the Kanban System. Create and organize tasks \
@@ -23,7 +23,7 @@ export class ScreenshotsWrapComponent {
       github:''
     },
     {
-      imgSrc: '/assets/imgs/project-imgs/Pollo loco 1.png',
+      imgSrc: 'assets/imgs/project-imgs/Pollo loco 1.png',
       title: 'El Pollo Loco',
       tech: 'JavaScript | HTML | CSS',
       description: 'A simple Jump-and-Run game based on an object-oriented approach. \
@@ -32,7 +32,7 @@ export class ScreenshotsWrapComponent {
       github:''
     },
     {
-      imgSrc: '/assets/imgs/project-imgs/pokedex.png',
+      imgSrc: 'assets/imgs/project-imgs/pokedex.png',
       title: 'Pokedex',
       tech: 'JavaScript | HTML | CSS | Api',
       description: 'Based on the PokéAPI a simple library that provides and catalogues pokemon information.',
