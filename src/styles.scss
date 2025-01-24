@@ -5,6 +5,21 @@ $violet: #9747FF;
 :root {
   --sitePadding: 5rem;
   --sectionPadding: 5rem;
+
+  --font-90: 5.625rem;
+  --line-90: 5.925rem;
+  --font-64: 4rem;
+  --line-64: 4.3rem;
+  --font-58: 3.625rem;
+  --line-58: 3.925rem;
+  --font-32: 2rem;
+  --line-32: 2.3rem;
+  --font-23: 1.438rem;
+  --line-23: 1.738rem;
+  --font-16: 1rem;
+  --line-16: 1.3rem;
+  --font-14: 0.875rem;
+  --line-14: 1.175rem;
 }
 
 *,
@@ -32,6 +47,10 @@ body {
   display: none !important;
 }
 
+.column {
+flex-direction: column;
+}
+
 .site-padding {
   padding: var(--sectionPadding) var(--sitePadding);
 }
@@ -44,11 +63,19 @@ body {
   padding: 0 var(--sitePadding);
 }
 
+.pos-rel {
+  position: relative;
+}
+
+.max-width {
+  max-width: 1500px;
+  width: 100%;
+}
+
 .button_primary {
   background-color: $green;
   border-radius: 12px;
   padding: 8px 24px;
-  font-size: 16px;
   cursor: pointer;
   transition: background-color ease-in-out 200ms;
 
@@ -61,7 +88,6 @@ body {
   background-color: $violet;
   border-radius: 12px;
   padding: 8px 24px;
-  font-size: 16px;
   cursor: pointer;
   transition: background-color ease-in-out 200ms;
   text-decoration: none;
@@ -76,7 +102,6 @@ body {
   border-radius: 12px;
   border: 1px solid $green;
   padding: 8px 24px;
-  font-size: 16px;
   cursor: pointer;
   transition: background-color ease-in-out 200ms;
   text-decoration: none;
@@ -89,7 +114,41 @@ body {
 h2 {
   font-family: 'Poppins';
   font-weight: bold;
-  font-size: 4rem;
+}
+
+.font90 {
+  font-size: var(--font-90);
+  line-height: var(--line-90);
+}
+
+.font64 {
+  font-size: var(--font-64);
+  line-height: var(--line-64);
+}
+
+.font58 {
+  font-size: var(--font-58);
+  line-height: var(--line-58);
+}
+
+.font32 {
+  font-size: var(--font-32);
+  line-height: var(--line-32);
+}
+
+.font23 {
+  font-size: var(--font-23);
+  line-height: var(--line-23);
+}
+
+.font16 {
+  font-size: var(--font-16);
+  line-height: var(--line-16);
+}
+
+.font14 {
+  font-size: var(--font-14);
+  line-height: var(--line-14);
 }
 
 @mixin site-padding($site: 5rem) {
@@ -102,8 +161,26 @@ h2 {
   align-items: $ai;
 }
 
+@mixin pos-absolute($top: auto, $bottom: auto, $left: auto, $right: auto) {
+  position: absolute;
+  top: $top;
+  bottom: $bottom;
+  left: $left;
+  right: $right;
+}
+
+
+.section-wrap {
+  @include d-flex($jc: start, $ai: center);
+  width:100%;
+}
+
 .d-flex {
   @include d-flex();
+}
+
+.d-flex-x-end {
+  @include d-flex($jc: end);
 }
 
 @media (min-width:1900px) {
@@ -127,20 +204,13 @@ h2 {
 @media (max-width:768px) {
   :root {
     --sitePadding: 2rem;
+    --sectionPadding: 3rem;
   }
 }
 
 @media (max-width:480px) {
   :root {
     --sitePadding: 1rem;
-  }
-
-  .description {
-    font-size: 0.875rem;
-  }
-
-  .title {
-    font-size: 2.625rem;
   }
 }
 

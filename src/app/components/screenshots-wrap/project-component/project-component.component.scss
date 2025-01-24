@@ -13,15 +13,52 @@ img {
 }
 
 .project-title {
-    font-size: 2rem;
-    line-height: 2.4rem;
     color: $violet;
     font-weight: 700;
 }
 
 .project-tech {
-    font-size: 1.438rem;
-    line-height: 1.725rem;
     color: $green;
-    font-weight: 400; 
+    font-weight: 400;
+}
+
+.mobile-desc-1 {
+    width: 50%;
+    align-items: start;
+}
+
+.mobile-desc-2 {
+    width: 50%;
+    align-items: end;
+}
+
+@media (max-width: 620px) {
+    .mobile_order-1 {
+        order: -1;
+    }
+
+    .mobile_column {
+        flex-direction: column;
+    }
+
+    .project-tech,
+    .description {
+        text-align: center !important;
+    }
+
+    img {
+        height: auto;
+    }
+
+    .mobile-desc-1,
+    .mobile-desc-2 {
+        width: 100%;
+        align-items: center;
+    }
+
+    .mobile-dflex {
+        display: flex;
+        justify-content: center!important;
+        align-items: center;
+    }
 }

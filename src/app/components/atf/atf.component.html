@@ -1,0 +1,42 @@
+<section class="section-wrap pos-rel atf-padding-top">
+    <div class="max-width padding-inline d-flex">
+        <div [ngClass]="{
+            'column': viewportWidth < 1320, 
+            'gap2rem': viewportWidth < 1320
+        }" 
+        class="d-flex pos-rel w100">
+            <div class="pos-rel">
+                <div class="img_wrap pos-rel">
+                    <img src="assets/imgs/portofolio-foto.svg" alt="">
+                </div>
+                <div class="vektor1" [innerHTML]="vektor1"></div>
+                <div class="vektor2" [innerHTML]="vektor2"></div>
+            </div>
+            <div class="d-flex text_wrap" [ngClass]="{
+                'order-2': viewportWidth < 1320, 
+            }" >
+                <div>
+
+                    <div class="main-title column">
+                        <div [ngClass]="{
+                            'margin-left--7rem': viewportWidth > 1320
+                        }" 
+                        class="title-frame">
+                            <div class="i-am">
+                                <span class="font64">I am</span>
+                            </div>
+                            <div style="margin-left: -2rem;">
+                                <h1 class="bold font90">Andre Karyoti</h1>
+                                <h2 class="purple-font font58">Frontend Developer</h2>
+                            </div>
+                        </div>
+                        <button class="button_primary font23">Let's Talk!</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="vektor3" [innerHTML]="vektor3"></div>
+
+</section>

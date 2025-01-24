@@ -3,11 +3,17 @@
 .main-content {
     @include d-flex();
     flex-direction: column;
-    max-width: 1800px;  
+    border-radius: 3.125rem;
 }
 
 .description {
     font-family: 'Poppins';
-    font-size: 16px;
     font-weight: normal;
 }
+
+@media (min-width: 1500px) {
+    .main-content {
+        border: 10px solid rgba(255,255,255,0.2);
+    }
+}
+

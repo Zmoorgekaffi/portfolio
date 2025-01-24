@@ -1,23 +1,63 @@
 @import './../../../styles.scss';
 
 .portfolio-header-wrap {
-    @include d-flex(end, center);
+    @include d-flex(center, center);
     gap: 2.5rem;
+    position: relative;
 }
 
 .stroke1 {
     background-color: $violet;
     height: 3px;
-    width: 6.813rem;
+    width: 6.813rem;    
 }
 
 .stroke2 {
     background-color: $violet;
     height: 3px;
     width: 30.25rem;
+    margin-right: calc(var(--sitePadding) - (var(--sitePadding) * 2));
+}
+
+.w33 {
+    width: 33.3333%
 }
 
 .projects-wrap {
     @include d-flex();
     flex-direction: column;
+}
+
+@media (max-width: 850px) {
+    .portfolio-header-wrap {
+        gap: 1.5rem;
+    }
+
+    .w33 {
+        width: auto;
+    }
+
+    .stroke2 {
+        width: 30.25rem!important;
+    }
+
+    .stroke1 {
+        width: 4.813rem;    
+    }
+}
+
+@media (max-width: 650px) {
+    .stroke1 {
+        width: 2.813rem;    
+    }
+}
+
+@media (max-width: 480px) {
+    .portfolio-header-wrap {
+        gap: 0.5rem;
+    }
+
+    .stroke1 {
+        width: 1.513rem;    
+    }
 }

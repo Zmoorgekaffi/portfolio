@@ -1,38 +1,38 @@
 @if (parentIndex % 2 == 0) {
-    <div class="w100 block-padding d-flex">
+    <div class="w100 block-padding d-flex mobile_column">
         <div class="d-flex" style="width:50%">
             <img src="{{projectInfo.imgSrc}}" alt="project-screenshot">
         </div>
-        <div class="description-frame" style="width:50%; align-items: start;">
-            <h3 class="project-title">{{projectInfo.title}}</h3>
-            <p class="project-tech">{{projectInfo.tech}}</p>
+        <div class="description-frame mobile-desc-1">
+            <h3 class="project-title font32">{{projectInfo.title}}</h3>
+            <p class="project-tech font23">{{projectInfo.tech}}</p>
             <p class="description">{{projectInfo.description}}</p>
             <div class="w100 d-flex" style="margin-top: 1rem;">
-                <div style="width: 50%">
+                <div style="width: 50%" class="mobile-dflex">
                     <a class="button_secondary" href="{{projectInfo.url}}">Live Test</a>
                 </div>
-                <div style="width: 50%">
+                <div style="width: 50%" class="mobile-dflex">
                     <a class="button_third" href="{{projectInfo.github}}">Github</a>
                 </div>
             </div>
         </div>
     </div>
 } @else {
-    <div class="w100 block-padding d-flex">
-        <div class="description-frame" style="width:50%; align-items: end;">
-            <h3 class="project-title">{{projectInfo.title}}</h3>
-            <p class="project-tech">{{projectInfo.tech}}</p>
+    <div class="w100 block-padding d-flex mobile_column">
+        <div class="description-frame mobile-desc-2">
+            <h3 class="project-title font32">{{projectInfo.title}}</h3>
+            <p class="project-tech font23">{{projectInfo.tech}}</p>
             <p class="description" style="text-align: right;">{{projectInfo.description}}</p>
             <div class="w100 d-flex" style="margin-top: 1rem;">
-                <div style="width: 50%; justify-content: end;" class="d-flex">
+                <div style="width: 50%; justify-content: end;" class="d-flex mobile-dflex">
                     <a class="button_secondary" href="{{projectInfo.url}}">Live Test</a>
                 </div>
-                <div style="width: 50%; justify-content: end;" class="d-flex">
+                <div style="width: 50%; justify-content: end;" class="d-flex mobile-dflex">
                     <a class="button_third" href="{{projectInfo.github}}">Github</a>
                 </div>
             </div>
         </div>
-        <div class="d-flex" style="width:50%">
+        <div class="d-flex mobile_order-1" style="width:50%">
             <img src="{{projectInfo.imgSrc}}" alt="project-screenshot">
         </div>
     </div>

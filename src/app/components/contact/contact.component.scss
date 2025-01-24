@@ -1,0 +1,83 @@
+@import './../../../styles.scss';
+
+.violet-stick {
+    height: 3px;
+    width: 50px;
+    background-color: $violet;
+}
+
+.section-header {
+    gap: 3.125rem;
+    @include d-flex($jc:start);
+    margin-bottom: var(--sectionPadding);
+}
+
+.contact-form-frame {
+    @include d-flex($ai: start);
+    gap: 3rem;    
+}
+
+.contact-info-contain {
+    @include d-flex($jc:start, $ai:start);
+}
+
+.contact-input-contain {
+    @include d-flex($jc:start, $ai:start);
+    gap: 2rem;    
+}
+
+h2 {
+    margin-bottom: 2.1875rem;
+}
+
+.margin-bottom {
+    margin-bottom: 1.5rem;
+}
+
+.w50 {
+    width: 50%;
+}
+
+.input-field {
+    background-color: transparent;
+    color: white;
+    border-radius: 10px;
+    border: solid 1px $purple;
+    padding: 0.5rem;
+}
+
+.input-field:user-valid {
+    border: solid 1px $green;
+}
+
+.input-field:user-invalid {
+    border: solid 1px red;
+}
+
+.input-field:focus, .input-field:focus-visible {
+    border-color: $purple;
+}
+
+//die folgenden styles werden nicht übernommen, ich habe schon einiges ausprobiert
+//ich habe die sachen dennoch mal drinnen gelassen auch wenn sie nicht funktionieren,
+//damit man sieht was ich schon alles probiert habe :)
+.input-field:-webkit-autofill {
+    background-color: transparent !important;
+    background-image: none !important;
+    box-shadow: 0 0 0 30px transparent inset !important;
+    -webkit-appearance: none !important;
+    appearance: none !important;
+}
+
+.input-field:-webkit-autofill:focus {
+    background-color: transparent !important;
+    background-image: none !important;
+    box-shadow: 0 0 0 30px transparent inset !important;
+    -webkit-appearance: none !important;
+    appearance: none !important;
+}
+
+.input-field:not(:placeholder-shown) {
+    background-color: transparent !important;
+    box-shadow: none !important;
+}

@@ -28,8 +28,15 @@ section {
     gap: 2rem;
 }  
 
-.title-frame {
-    line-height: 3rem;
+.title_frame {
+    gap: 2.625rem;
+}
+
+.title_stroke {
+    height: 3px;
+    background-color: $purple;
+    width: 5rem;
+    margin-right: calc(var(--sitePadding) - var(--sitePadding) * 2);
 }
 
 .skill_img_container {
@@ -70,9 +77,14 @@ section {
 @media (max-width:480px) {
     .skills_layout {
         grid-template-columns: auto auto auto;
+        grid-gap: 0.5rem;
     }
 
-    section {
-        padding-inline: 0!important;
+    .title_frame {
+        gap: 0.5rem;
+    }
+
+    .title_stroke {
+        width: 4rem;
     }
 }

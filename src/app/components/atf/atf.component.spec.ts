@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AtfSectionComponent } from './atf-section.component';
+import { AtfComponent } from './atf.component';
 
-describe('AtfSectionComponent', () => {
-  let component: AtfSectionComponent;
-  let fixture: ComponentFixture<AtfSectionComponent>;
+describe('AtfComponent', () => {
+  let component: AtfComponent;
+  let fixture: ComponentFixture<AtfComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [AtfSectionComponent]
+      imports: [AtfComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(AtfSectionComponent);
+    fixture = TestBed.createComponent(AtfComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,17 +1,19 @@
-<section class="padding-inline">
+<section>
     <nav class="nav-links-frame">
         <img class="logo" src="assets/imgs/solarhub-logo-klein.png" alt="">
         <div class="nav-links">
-            <a>About me</a>
-            <a>Skills</a>
-            <a>Portfolio</a>
+            <a (click)="scrollTo('about-me')" class="font23">About me</a>
+            <a (click)="scrollTo('my-skills')" class="font23">Skills</a>
+            <a (click)="scrollTo('portfolio')" class="font23">Portfolio</a>
+            <a (click)="scrollTo('contact')" class="font23">Contact</a>
         </div>
         <img class="burger-menu" src="assets/imgs/icons/burger-menu.png" alt="" (click)="toggleMobileNav()">
         <div #mobileMenu class="mobile-nav-links-frame d-none"  #mobileNavLinks>
             <div>
-                <a>About me</a>
-                <a>Skills</a>
-                <a>Portfolio</a>
+                <a (click)="scrollTo('about-me')" class="font23">About me</a>
+                <a (click)="scrollTo('my-skills')" class="font23">Skills</a>
+                <a (click)="scrollTo('portfolio')" class="font23">Portfolio</a>
+                <a (click)="scrollTo('contact')" class="font23">Contact</a>
             </div>
         </div>
     </nav>

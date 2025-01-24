@@ -9,7 +9,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './header.component.scss'
 })
 
-export class HeaderComponent {
+export class HeaderComponent{
   windowWidth = window.innerWidth;
   mobileToggle = false;
   @ViewChild('mobileMenu') mobileMenu!: ElementRef;
@@ -45,6 +45,27 @@ export class HeaderComponent {
     setTimeout(() => {
       this.mobileMenu.nativeElement.classList.add('d-none');
     }, 300);
+  }
+
+  scrollTo(id:string) {
+    switch (id) {
+      case 'about-me':
+        this.ScrollToElementId(`${id}`);
+        break;
+      case 'my-skills':
+        this.ScrollToElementId(`${id}`);
+        break;
+      case 'portfolio':
+        this.ScrollToElementId(`${id}`);
+        break;
+      case 'contact':
+        this.ScrollToElementId(`${id}`);
+        break;
+      }
+  }
+
+  ScrollToElementId(id:string) {
+    document.getElementById(`${id}`)?.scrollIntoView({behavior: 'smooth'});
   }
 }
 
