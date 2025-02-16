@@ -12,6 +12,10 @@ import { CommonModule } from '@angular/common';
 export class HeaderComponent{
   windowWidth = window.innerWidth;
   mobileToggle = false;
+  lastScrollPosition:number = 0;
+  showHeader:boolean = true;
+  
+  //hostlistener variables
   @ViewChild('mobileMenu') mobileMenu!: ElementRef;
 
   @HostListener('window:resize', ['$event'])
@@ -26,6 +30,20 @@ export class HeaderComponent{
     }   
   }
 
+  @HostListener('window:scroll', ['$event'])
+  onWindowScroll(event: Event) {
+    const currentScrollPosition = window.scrollY;
+
+    if(currentScrollPosition < this.lastScrollPosition) {
+      this.showHeader = true;
+    } else {
+      this.showHeader = false;
+    }
+
+    this.lastScrollPosition = currentScrollPosition;
+  }
+
+  //conpmonent functions
   toggleMobileNav() {
     if(this.mobileToggle === true) {
       this.mobileToggle = false;

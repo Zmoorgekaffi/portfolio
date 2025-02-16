@@ -65,7 +65,33 @@ a:hover {
     color: $purple;
 }
 
+.mobile-menu_move-up-animation {
+    animation: mobile-menu-move-up ease-in-out 200ms forwards;
+}
+
+.mobile-menu_move-down-animation {
+    animation: mobile-menu-move-down ease-in-out 200ms forwards;
+}
+
 // keyframes
+@keyframes mobile-menu-move-up {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-101%);
+    }
+}
+
+@keyframes mobile-menu-move-down {
+    0% {
+        transform: translateY(-101%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
 @keyframes mobile-menu-show {
     0% {
         opacity: 0;

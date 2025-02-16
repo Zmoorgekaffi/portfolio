@@ -1,4 +1,10 @@
-<section>
+<section 
+    [ngClass]="{
+        'mobile-menu_move-down-animation': showHeader && windowWidth < 860,
+        'mobile-menu_move-up-animation': !showHeader&& windowWidth < 860
+    }"
+>
+
     <nav class="nav-links-frame">
         <img class="logo" src="assets/imgs/solarhub-logo-klein.png" alt="">
         <div class="nav-links">
