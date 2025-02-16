@@ -11,6 +11,12 @@
     font-weight: normal;
 }
 
+.mobileMenu {
+    position: sticky;
+    top: 0;
+}
+
+
 @media (min-width: 1500px) {
     .main-content {
         border: 10px solid rgba(255,255,255,0.2);

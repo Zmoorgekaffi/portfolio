@@ -22,6 +22,10 @@ $violet: #9747FF;
   --line-14: 1.175rem;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 *,
 ::after,
 ::before {
@@ -77,10 +81,13 @@ flex-direction: column;
   border-radius: 12px;
   padding: 8px 24px;
   cursor: pointer;
-  transition: background-color ease-in-out 200ms;
+  transition: background-color 200ms ease-in-out, transform 200ms ease-in-out;
+  position: relative;
+  z-index: 100;
 
   &:hover {
       background-color: $violet;
+      transform: scale(1.1);
   }
 }
 
@@ -107,7 +114,7 @@ flex-direction: column;
   text-decoration: none;
 
   &:hover {
-      background-color: $violet;
+      background-color: $green;
   }
 }
 
@@ -198,6 +205,13 @@ h2 {
 @media (max-width:991px) {
   :root {
     --sitePadding: 3rem;
+
+    --font-90: 4.625rem;
+    --line-90: 4.925rem;
+    --font-64: 3rem;
+    --line-64: 3.3rem;
+    --font-58: 2.625rem;
+    --line-58: 2.925rem;
   }
 }
 
@@ -205,12 +219,31 @@ h2 {
   :root {
     --sitePadding: 2rem;
     --sectionPadding: 3rem;
+
+    --font-90: 3.625rem;
+    --line-90: 3.925rem;
+    --font-64: 2.3rem;
+    --line-64: 2.6rem;
+    --font-58: 1.625rem;
+    --line-58: 1.925rem;
+
+
+    --font-23: 1rem;
+    --line-23: 1.3rem;
   }
+  
 }
 
 @media (max-width:480px) {
   :root {
     --sitePadding: 1rem;
+
+    --font-90: 2.125rem;
+    --line-90: 2.425rem;
+    --font-64: 1.8rem;
+    --line-64: 2.1rem;
+    --font-58: 1.5rem;
+    --line-58: 1.8rem;
   }
 }
 
