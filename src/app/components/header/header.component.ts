@@ -6,7 +6,7 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './header.component.html',
-  styleUrl: './header.component.scss'
+  styleUrl: './header.component.scss',
 })
 
 export class HeaderComponent{
@@ -38,24 +38,37 @@ export class HeaderComponent{
       this.showHeader = true;
     } else {
       this.showHeader = false;
+      if(this.mobileToggle == true) {
+        this.closeMobileMenu();      
+      }
     }
 
     this.lastScrollPosition = currentScrollPosition;
   }
 
   //conpmonent functions
+  closeMobileMenu() {
+    this.mobileMenu.nativeElement.classList.remove('d-none');
+    this.mobileMenu.nativeElement.classList.remove('mobile-menu_show-animation');
+    if(this.mobileToggle == true) {
+      this.mobileMenu.nativeElement.classList.add('mobile-menu_hide-animation');      
+    }
+    this.addDNone();
+    this.mobileToggle = false;
+  }
+
   toggleMobileNav() {
     if(this.mobileToggle === true) {
-      this.mobileToggle = false;
       this.mobileMenu.nativeElement.classList.remove('d-none');
       this.mobileMenu.nativeElement.classList.remove('mobile-menu_show-animation');
       this.mobileMenu.nativeElement.classList.add('mobile-menu_hide-animation');
       this.addDNone();
+      this.mobileToggle = false;
     } else {
-      this.mobileToggle = true;
       this.mobileMenu.nativeElement.classList.remove('d-none');
       this.mobileMenu.nativeElement.classList.remove('mobile-menu_hide-animation');
       this.mobileMenu.nativeElement.classList.add('mobile-menu_show-animation');
+      this.mobileToggle = true;
     }
   }
 
