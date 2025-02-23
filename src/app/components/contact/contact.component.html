@@ -14,15 +14,26 @@
         </div>
 
         <form autocomplete="off" action="#" class="contact-input-contain w50 column">
-            <input autocomplete="off" class="w100 input-field" name="name" type="text" required minlength="1" placeholder="Your name"
-                pattern="[a-zA-Z\s]+">
-            <input autocomplete="off" class="w100 input-field" name="email" type="email" required minlength="5" placeholder="Your email"
+
+            <input ngModel #name="ngModel" autocomplete="off" class="w100 input-field" name="name" type="text" required minlength="1" placeholder="Your name" pattern="[a-zA-Z\s]+">
+            
+            @if(name.invalid && name.touched){
+                <p style="color: red;"> Gebe deinen Namen ein. </p>
+            }
+            
+            <input ngModel #email="ngModel" autocomplete="off" class="w100 input-field" name="email" type="email" required minlength="5" placeholder="Your email"
                 pattern="[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
-            <textarea autocomplete="off" class="w100 input-field" name="message" placeholder="Your message"></textarea>
+            
+                @if(email.invalid && email.touched){
+                    <p style="color: red;"> Gebe deine korrekte Email Adresse ein. </p>
+                }
+
+                <textarea autocomplete="off" class="w100 input-field" name="message" placeholder="Your message"></textarea>
            
             <div class="checkbox-wrap gap-05">
                 <label for="checkbox" class="custom-checkbox">
-                    <input id="checkbox" name="checkbox" type="checkbox" required>
+                    <input ngModel #checkbox="ngModel" id="checkbox" name="checkbox" type="checkbox" required>
+
                     <div class="checkbox">
                         <div class="checkobox-icon-wrap">
                             <svg 
@@ -39,7 +50,14 @@
                     </div>
                 </label>
                 <p class="font14">I've read the <span class="color-purple">privacy policy</span> and agree to the processing of my data as outlined.</p>
-                <button class="button" type="submit"></button>
+            </div>
+
+            @if(checkbox.invalid && checkbox.touched){
+                <p style="color: red;"> Lese die Datenschutz Bedingungen und aktzeptiere sie um das Formular abschicken zu können. </p>
+            }
+
+            <div class="d-flex w100 padding-top-1rem">
+                <button class="button_primary font23" type="submit">Send message :)</button>
             </div>
         </form>
 

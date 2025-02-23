@@ -3,7 +3,6 @@
 section {
     font-family: 'Poppins';
     position: relative;
-    z-index: 1001!important;
 }
 
 .nav-links-frame {
@@ -35,7 +34,6 @@ section {
     position: absolute;
     top: 64px;
     right: 0;
-    z-index: 100000000;
     opacity: 0;
     padding: 1rem;
     @include d-flex();

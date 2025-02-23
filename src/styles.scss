@@ -67,8 +67,16 @@ flex-direction: column;
   padding: 0 var(--sitePadding);
 }
 
+.padding-top-1rem {
+  padding-top: 1rem;
+}
+
 .pos-rel {
   position: relative;
+}
+
+.overflow-hidden {
+  overflow: hidden;
 }
 
 .max-width {
