@@ -9,7 +9,7 @@
 }
 
 .atf-padding-top {
-    padding-top: calc(var(--sectionPadding)*2);
+    padding-top: calc(var(--sectionPadding) + 1rem);
 }
 
 .img_wrap {
@@ -113,5 +113,11 @@
 @media (max-width:991px) {
     .title-frame {
         gap: 1rem;
+    }
+}
+
+@media (max-width:869px) {
+    .atf-padding-top {
+        padding-top: calc(var(--sectionPadding) + 2.5rem);
     }
 }

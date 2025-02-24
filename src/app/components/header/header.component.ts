@@ -14,6 +14,7 @@ export class HeaderComponent{
   mobileToggle = false;
   lastScrollPosition:number = 0;
   showHeader:boolean = true;
+  domTop:boolean = true;
   
   //hostlistener variables
   @ViewChild('mobileMenu') mobileMenu!: ElementRef;
@@ -32,8 +33,17 @@ export class HeaderComponent{
 
   @HostListener('window:scroll', ['$event'])
   onWindowScroll(event: Event) {
-    const currentScrollPosition = window.scrollY;
+    this.showHeaderLogic()
+    this.lookIfViewIsOnTopOfDom()
+  }
 
+  //conpmonent functions
+  lookIfViewIsOnTopOfDom(): void {
+    this.domTop = window.scrollY === 0; // Ist true, wenn man ganz oben ist
+  }
+
+  showHeaderLogic() {
+    const currentScrollPosition = window.scrollY;
     if(currentScrollPosition < this.lastScrollPosition) {
       this.showHeader = true;
     } else {
@@ -46,7 +56,6 @@ export class HeaderComponent{
     this.lastScrollPosition = currentScrollPosition;
   }
 
-  //conpmonent functions
   closeMobileMenu() {
     this.mobileMenu.nativeElement.classList.remove('d-none');
     this.mobileMenu.nativeElement.classList.remove('mobile-menu_show-animation');

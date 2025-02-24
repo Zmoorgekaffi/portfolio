@@ -1,12 +1,19 @@
 <section 
     [ngClass]="{
-        'mobile-menu_move-down-animation': showHeader && windowWidth < 860,
-        'mobile-menu_move-up-animation': !showHeader&& windowWidth < 860
+        'mobile-menu_move-down-animation': showHeader,
+        'mobile-menu_move-up-animation': !showHeader,
+        'margin-top-3rem': windowWidth > 1499 && domTop
     }"
+
+    class="d-flex"
 >
 
-    <nav class="nav-links-frame">
-        <img class="logo" src="assets/imgs/solarhub-logo-klein.png" alt="">
+    <nav class="nav-links-frame max-width padding-inline">
+        <div (click)="scrollTo('about-me')" class="logo d-flex">
+            <span class="font32">
+                <span class="color-purple">A</span>NDR<span class="color-green">E</span>
+            </span>
+        </div>
         <div class="nav-links">
             <a (click)="scrollTo('about-me')" class="font23">About me</a>
             <a (click)="scrollTo('my-skills')" class="font23">Skills</a>

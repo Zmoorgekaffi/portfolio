@@ -6,6 +6,7 @@ import { SkillsComponent } from '../skills/skills.component';
 import { ScreenshotsWrapComponent } from '../screenshots-wrap/screenshots-wrap.component';
 import { AtfComponent } from '../atf/atf.component';
 import { ContactComponent } from '../contact/contact.component';
+import { FooterComponent } from '../footer/footer.component';
 import { WindowsizeService } from '../../services/windowsize.service';
 
 @Component({
@@ -18,7 +19,8 @@ import { WindowsizeService } from '../../services/windowsize.service';
     AboutMeComponent,
     SkillsComponent,
     ScreenshotsWrapComponent,
-    ContactComponent
+    ContactComponent,
+    FooterComponent
 ],
   templateUrl: './maincontent.component.html',
   styleUrl: './maincontent.component.scss'

@@ -2,11 +2,15 @@
 
 section {
     font-family: 'Poppins';
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
 }
 
 .nav-links-frame {
     position: relative;
+    width: 100%;
     @include d-flex(space-between);
     padding-block: 1rem;
     .logo {
@@ -73,6 +77,18 @@ a:hover {
     animation: mobile-menu-move-down ease-in-out 200ms forwards;
 }
 
+.margin-top-3rem {
+    margin-top: 3rem!important;
+}
+
+.color-green {
+    color: $green!important;
+}
+
+.color-purple {
+    color: $purple!important;
+}
+
 // keyframes
 @keyframes mobile-menu-move-up {
     0% {
@@ -114,9 +130,6 @@ a:hover {
 
 // component specific media
 @media (max-width: 1500px) {
-    section {
-        padding-inline: var(--sitePadding);
-    }
 
     .nav-links-frame {
         padding-bottom: 0;

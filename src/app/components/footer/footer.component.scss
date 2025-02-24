@@ -1,0 +1,52 @@
+@import './../../../styles.scss';
+
+section {
+    border-top: 0.2rem solid $green;
+    align-items: space-between;
+}
+
+.footer-content-wrap {
+    @include d-flex($jc: space-between);
+}
+
+.sm-wrap {
+    @include d-flex($jc: space-between);
+    gap: 2.5rem;
+}
+
+.sm-icon-wrap {
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+    color: white;
+
+    svg {
+        transition: transform ease-in-out 200ms, color ease-in-out 200ms;
+        color: currentColor;
+
+        g {
+            color: currentColor;
+        } 
+    }
+
+    &:hover {
+        color: $green;
+
+        svg {
+            transform: scale(1.1);
+        }
+    }
+}
+
+@media (max-width:720px) {
+    .sm-wrap {
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 540px) {
+    .footer-content-wrap {
+        gap: 1.5rem;
+        justify-content: center;
+    }
+}
