@@ -101,6 +101,25 @@ input[type="checkbox"]:checked + .checkbox .checkobox-icon-wrap {
     color: $violet;
 }
 
+.animation-valdiationMessage{
+    animation: valdiationMessage ease-in-out 200ms forwards;
+}
+
+.input-container {
+    @include d-flex($ai:start);
+}
+
+@keyframes valdiationMessage {
+    0% {
+        opacity: 0;
+        transform: translateY(-1rem);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 @media(max-width:991px) {
     .contact-form-frame {
         flex-direction: column;    
