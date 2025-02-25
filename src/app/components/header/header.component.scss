@@ -13,10 +13,6 @@ section {
     width: 100%;
     @include d-flex(space-between);
     padding-block: 1rem;
-    .logo {
-        width: 164px;
-        height: 64px;
-    }
     .nav-links {
         @include d-flex();
         gap: 1rem;
@@ -79,14 +75,6 @@ a:hover {
 
 .margin-top-3rem {
     margin-top: 3rem!important;
-}
-
-.color-green {
-    color: $green!important;
-}
-
-.color-purple {
-    color: $purple!important;
 }
 
 // keyframes
