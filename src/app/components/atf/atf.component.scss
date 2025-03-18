@@ -149,6 +149,10 @@
     }
 }
 
+.z-index-99 {
+    z-index: 1000;    
+}
+
 @media (max-width:991px) {
     .title-frame {
         gap: 1rem;

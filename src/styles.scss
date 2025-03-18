@@ -71,6 +71,10 @@ flex-direction: column;
   padding-top: 1rem;
 }
 
+.padding-bottom-1rem {
+  padding-bottom: 1rem;
+}
+
 .pos-rel {
   position: relative;
 }
@@ -235,6 +239,7 @@ h2 {
 @media (max-width:991px) {
   :root {
     --sitePadding: 3rem;
+    --sectionPadding: 3rem;
 
     --font-90: 4.625rem;
     --line-90: 4.925rem;
@@ -248,7 +253,6 @@ h2 {
 @media (max-width:768px) {
   :root {
     --sitePadding: 2rem;
-    --sectionPadding: 3rem;
 
     --font-90: 3.625rem;
     --line-90: 3.925rem;
@@ -276,6 +280,24 @@ h2 {
     --line-58: 1.8rem;
   }
 }
+
+/* scrollbar */
+  /* width */
+	::-webkit-scrollbar {
+  	width: 0.5rem;
+	}
+
+	/* Track */
+	::-webkit-scrollbar-track {
+  	background: #141D2F;
+	}
+
+	/* Handle */
+	::-webkit-scrollbar-thumb {
+    background: linear-gradient(0deg, $purple 25%, $green 100%);
+    border-radius: 0.5rem;
+	}
+
 
 /* fonts */
 /* poppins-100 - latin */

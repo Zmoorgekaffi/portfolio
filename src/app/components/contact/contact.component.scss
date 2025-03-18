@@ -19,6 +19,7 @@
 
 .contact-info-contain {
     @include d-flex($jc:start, $ai:start);
+    gap: 0.5rem;
 }
 
 .contact-input-contain {

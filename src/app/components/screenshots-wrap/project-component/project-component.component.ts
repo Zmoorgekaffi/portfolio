@@ -6,7 +6,8 @@ interface ProjectInfo {
   tech: string;
   description: string,
   url:string,
-  github:string
+  github:string,
+  webflow?:string,
 }
 
 

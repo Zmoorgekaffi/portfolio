@@ -20,6 +20,7 @@ export class SkillsComponent {
     'assets/imgs/icons/skills/material.svg',
     'assets/imgs/icons/skills/rest-api.svg',
     'assets/imgs/icons/skills/scrum.svg',
+    'assets/imgs/icons/skills/webflow.svg',
   ];
   
 
