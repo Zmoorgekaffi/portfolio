@@ -13,7 +13,7 @@
 
         </div>
 
-        <form autocomplete="off" action="#" class="contact-input-contain w50 column">
+        <form (ngSubmit)="submitData(contactForm)" #contactForm="ngForm" autocomplete="off" action="#" class="contact-input-contain w50 column">
 
             <!-- name input -->
             <div style="gap: 0.5rem;" class="w100 input-container column">
@@ -27,14 +27,14 @@
             <!-- email input -->
             <div style="gap: 0.5rem;" class="w100 input-container column">
                 <input ngModel #email="ngModel" autocomplete="off" class="w100 input-field" name="email" type="email" required minlength="5" placeholder="Your email"
-                pattern="[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
+                pattern="[^@ \t\r\n]+@[^@ \t\r\n]+\.[a-zA-Z]{2,}">
             
                 @if(email.invalid && email.touched){
                     <p class="animation-valdiationMessage" style="color: red;"> Gebe deine korrekte Email Adresse ein. </p>
                 }
             </div>
 
-            <textarea autocomplete="off" class="w100 input-field" name="message" placeholder="Your message"></textarea>
+            <textarea ngModel #message="ngModel" autocomplete="off" class="w100 input-field" name="message" placeholder="Your message"></textarea>
            
             <!-- checkbox -->
             <div style="gap: 0.5rem;" class="w100 input-container column">

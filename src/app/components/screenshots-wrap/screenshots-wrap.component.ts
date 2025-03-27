@@ -16,7 +16,7 @@ export class ScreenshotsWrapComponent {
     {
       imgSrc: 'assets/imgs/project-imgs/join.png',
       title: 'join',
-      tech: 'Angular | TypeScript | HTML | CSS | Firebase',
+      tech: 'Javascript | HTML | CSS | Api',
       description: 'Task manager inspired by the Kanban System. Create and organize tasks \
                     using drag and drop functions, assign users and categories.',
       url: 'https://gruppe-812.developerakademie.net/index.html',

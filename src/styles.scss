@@ -20,6 +20,9 @@ $violet: #9747FF;
   --line-16: 1.3rem;
   --font-14: 0.875rem;
   --line-14: 1.175rem;
+
+  //used for vectors in screenshots-wrap component
+  --vectorResidue: -35rem;
 }
 
 html {
@@ -250,6 +253,12 @@ h2 {
   }
 }
 
+@media(max-width: 650px) {
+  :root {
+    --vectorResidue: -43rem;
+  }
+}
+
 @media (max-width:768px) {
   :root {
     --sitePadding: 2rem;
@@ -278,6 +287,10 @@ h2 {
     --line-64: 2.1rem;
     --font-58: 1.5rem;
     --line-58: 1.8rem;
+  }
+
+  :root {
+    --vectorResidue: -47rem;
   }
 }
 

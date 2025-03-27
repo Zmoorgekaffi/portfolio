@@ -11,9 +11,19 @@
                 <div style="width: 50%" class="mobile-dflex">
                     <a class="button_secondary" href="{{projectInfo.url}}">Live Test</a>
                 </div>
-                <div style="width: 50%" class="mobile-dflex">
-                    <a class="button_third" href="{{projectInfo.github}}">Github</a>
-                </div>
+
+                @if(projectInfo.webflow) {
+                    <div style="width: 50%; justify-content: end;" class="d-flex mobile-dflex">
+                        <a class="button_third" target="_blank" href="{{projectInfo.webflow}}">Webflow</a>
+                    </div> 
+                }
+                
+                @else {
+                    <div style="width: 50%; justify-content: end;" class="d-flex mobile-dflex">
+                        <a class="button_third" target="_blank" href="{{projectInfo.github}}">Github</a>
+                    </div>
+                }
+
             </div>
         </div>
     </div>
@@ -30,13 +40,13 @@
 
                 @if(projectInfo.webflow) {
                     <div style="width: 50%; justify-content: end;" class="d-flex mobile-dflex">
-                        <a class="button_third" href="{{projectInfo.webflow}}">Webflow</a>
+                        <a class="button_third" target="_blank" href="{{projectInfo.webflow}}">Webflow</a>
                     </div> 
                 }
                 
                 @else {
                     <div style="width: 50%; justify-content: end;" class="d-flex mobile-dflex">
-                        <a class="button_third" href="{{projectInfo.github}}">Github</a>
+                        <a class="button_third" target="_blank" href="{{projectInfo.github}}">Github</a>
                     </div>
                 }
 
