@@ -1,6 +1,6 @@
 //imports
 import { HttpClient } from '@angular/common/http';
-import { Component,  ViewChild, inject } from '@angular/core';
+import { Component,  ViewChild, inject, ElementRef, viewChild } from '@angular/core';
 import { NgModel, FormsModule, NgForm } from '@angular/forms';
 
 //interfaces
@@ -43,8 +43,7 @@ export class ContactComponent {
 
   http = inject(HttpClient);
   formData:{} = {};
-
-  /*mailTest = true;*/
+  submitted:boolean = false;
 
   post: Post = {
     endPoint: '',
@@ -58,7 +57,7 @@ export class ContactComponent {
   };
 
   submitData(contactForm: NgForm) {
-    if(contactForm.submitted && contactForm.valid /*&& !this.mailTest*/) {
+    if(contactForm.submitted && contactForm.valid) {
       this.formData = this.alignFormData();
       this.setUpPost();
       this.http.post(this.post.endPoint, this.post.body(this.formData), this.post.options)
@@ -70,16 +69,17 @@ export class ContactComponent {
         error: (error) => {
           console.error(error);
         },
-        complete: () => console.info('send post complete'),
+        complete: () => this.formSuccessMessage(),
       });
     } 
-    /*else if (contactForm.submitted && contactForm.form.valid && this.mailTest) {
 
-      contactForm.resetForm();
-    }*/
     else {
       alert('Please fill out the required fields to submit');
     }
+  }
+
+  formSuccessMessage(): void {
+    this.submitted = true;
   }
 
   alignFormData():FormData {

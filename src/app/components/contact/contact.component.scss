@@ -111,6 +111,11 @@ input[type="checkbox"]:checked + .checkbox .checkobox-icon-wrap {
     @include d-flex($ai:start);
 }
 
+.success-message {
+    text-align: center;
+    @include d-flex($ai: end)
+}
+
 @keyframes valdiationMessage {
     0% {
         opacity: 0;
