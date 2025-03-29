@@ -36,10 +36,45 @@ html {
   margin: 0;
   color: white;
   font-family: 'Poppins';
+  text-decoration: none;
 }
 
 body {
   background-color: #141D2F;
+  min-height: 100vh;
+}
+
+@mixin site-padding($site: 5rem) {
+  padding: 0 $site;
+}
+
+@mixin d-flex($jc: center, $ai: center) {
+  display: flex;
+  justify-content: $jc;
+  align-items: $ai;
+}
+
+@mixin pos-absolute($top: auto, $bottom: auto, $left: auto, $right: auto) {
+  position: absolute;
+  top: $top;
+  bottom: $bottom;
+  left: $left;
+  right: $right;
+}
+
+.router-outlet-contain {
+  width: 100%;
+
+  & > *:not(router-outlet) {
+    width: 100%;
+    flex-direction: column;
+    @include d-flex($ai:center, $jc: start);
+    min-height: 100vh;
+  }
+}
+
+app-root {
+  min-height: 100vh;
 }
 
 .text-align-right {
@@ -195,24 +230,12 @@ h2 {
   cursor: pointer;
 }
 
-@mixin site-padding($site: 5rem) {
-  padding: 0 $site;
+.main-content {
+  @include d-flex();
+  flex-direction: column;
+  border-radius: 3.125rem;
+  margin-block: 3rem!important;
 }
-
-@mixin d-flex($jc: center, $ai: center) {
-  display: flex;
-  justify-content: $jc;
-  align-items: $ai;
-}
-
-@mixin pos-absolute($top: auto, $bottom: auto, $left: auto, $right: auto) {
-  position: absolute;
-  top: $top;
-  bottom: $bottom;
-  left: $left;
-  right: $right;
-}
-
 
 .section-wrap {
   @include d-flex($jc: start, $ai: center);
@@ -232,6 +255,19 @@ h2 {
     @include d-flex();
   }
 }
+
+@media (min-width: 1500px) {
+  .main-content {
+      border: 1px solid rgba(255,255,255,0.2);
+  }
+}
+
+@media (max-width: 1500px) {
+  .main-content {
+      margin-block: 0!important;
+  }
+}
+
 
 @media (max-width:1200px) {
   body {

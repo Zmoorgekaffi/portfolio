@@ -15,7 +15,8 @@
 
         <form (ngSubmit)="submitData(contactForm)" #contactForm="ngForm" autocomplete="off" action="#"
             class="contact-input-contain w50 column">
-            @if(submitted === false) {
+            @if(submitted === false
+            ) {
                 <!-- name input -->
                 <div style="gap: 0.5rem;" class="w100 input-container column">
                     <input 

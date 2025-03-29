@@ -1,0 +1,43 @@
+@import './../../../styles.scss';
+
+section {
+    width: 100%;
+    flex-grow: 1;
+}
+
+.impressum_content {
+    padding-top: 1rem;
+    flex-direction: column;
+    @include d-flex($ai:start, $jc: start);
+    gap: 2rem;
+}
+
+.impressum_item_contain {
+    flex-direction: column;
+    @include d-flex($ai:start, $jc: start);
+    gap: 0.8rem;
+}
+
+.impressum_title {
+    font-weight: 500;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 0.3rem;
+}
+
+.impressum_sub-title {
+    font-weight: 300;
+}
+
+.impressum_link {
+    transition: color 200ms;
+
+    &:hover {
+        color: $purple;
+    }
+}
+
+@media (max-width: 991px) {
+    .impressum_content {
+        padding-top: var(--sectionPadding);
+    }   
+}

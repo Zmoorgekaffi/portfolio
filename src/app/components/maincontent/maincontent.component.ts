@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HeaderComponent } from '../header/header.component';
 import { AboutMeComponent } from '../about-me/about-me.component';
 import { SkillsComponent } from '../skills/skills.component';
 import { ScreenshotsWrapComponent } from '../screenshots-wrap/screenshots-wrap.component';
@@ -14,7 +13,6 @@ import { WindowsizeService } from '../../services/windowsize.service';
   standalone: true,
   imports: [
     CommonModule,
-    HeaderComponent,
     AtfComponent,
     AboutMeComponent,
     SkillsComponent,

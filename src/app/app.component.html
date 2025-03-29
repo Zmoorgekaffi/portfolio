@@ -1,2 +1,4 @@
-<app-maincontent class="section-wrap column"></app-maincontent>
-<router-outlet></router-outlet>
+<app-header style="z-index: 99999; display: flex; position: relative;" [ngClass]="{'mobileMenu': windowWidthAsNumber <= 860}" class="w100 max-width"></app-header>
+<div class="router-outlet-contain">
+    <router-outlet></router-outlet>
+</div>

@@ -7,8 +7,10 @@ import { BehaviorSubject } from 'rxjs';
 export class WindowsizeService {
   private windowWidth = new BehaviorSubject<number>(window.innerWidth);
   windowWidth$ = this.windowWidth.asObservable(); // Observable für Komponenten
+  windowWithAsNumber = 0;
 
   constructor() {
+    this.initializeService();
     this.listenToResize();
   }
 
@@ -16,5 +18,9 @@ export class WindowsizeService {
     window.addEventListener('resize', () => {
       this.windowWidth.next(window.innerWidth);
     });
+  }
+
+  private initializeService() {
+    this.windowWithAsNumber = window.innerWidth;
   }
 }
