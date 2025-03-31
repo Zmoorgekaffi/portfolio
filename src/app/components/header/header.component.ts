@@ -1,5 +1,6 @@
 import { Component, HostListener, ViewChild, ElementRef} from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -16,6 +17,8 @@ export class HeaderComponent{
   showHeader:boolean = true;
   domTop:boolean = true;
   
+  constructor(private router: Router){}
+
   //hostlistener variables
   @ViewChild('mobileMenu') mobileMenu!: ElementRef;
 
@@ -105,7 +108,15 @@ export class HeaderComponent{
   }
 
   ScrollToElementId(id:string) {
-    document.getElementById(`${id}`)?.scrollIntoView({behavior: 'smooth'});
+    if (this.router.url !== '/') {
+      this.router.navigate(['/']).then(() => {
+        setTimeout(() => {
+          document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+      });
+    } else {
+      document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+    }
   }
 }
 

@@ -5,5 +5,5 @@ import { ImpressumComponent } from './components/impressum/impressum.component';
 
 export const routes: Routes = [
     {path: '', component: MaincontentComponent},
-    {path: 'impressum', component: ImpressumComponent}
+    {path: 'imprint', component: ImpressumComponent}
 ];
