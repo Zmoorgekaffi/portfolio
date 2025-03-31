@@ -38,6 +38,18 @@ section {
     }
 }
 
+.impressum_link {
+    transition: color 200ms;
+
+    &:hover {
+        color: $purple;
+    }
+}
+
+.gap {
+    gap: 1rem;
+}
+
 @media (max-width:720px) {
     .sm-wrap {
         gap: 1.5rem;
