@@ -1,5 +1,5 @@
 @if (parentIndex % 2 == 0) {
-    <div class="w100 block-padding d-flex mobile_column">
+    <div data-aos="zoom-in" data-aos-offset="250" class="w100 block-padding d-flex mobile_column">
         <div class="d-flex" style="width:50%">
             <img src="{{projectInfo.imgSrc}}" alt="project-screenshot">
         </div>
@@ -28,14 +28,14 @@
         </div>
     </div>
 } @else {
-    <div class="w100 block-padding d-flex mobile_column">
+    <div data-aos="zoom-in" data-aos-offset="250" class="w100 block-padding d-flex mobile_column">
         <div class="description-frame mobile-desc-2">
             <h3 class="project-title font32">{{projectInfo.title}}</h3>
             <p class="project-tech font23">{{projectInfo.tech}}</p>
             <p class="description" style="text-align: right;">{{projectInfo.description}}</p>
             <div class="w100 d-flex" style="margin-top: 1rem;">
                 <div style="width: 50%; justify-content: end;" class="d-flex mobile-dflex">
-                    <a class="button_secondary" href="{{projectInfo.url}}">Live Test</a>
+                    <a class="button_secondary" target="_blank" href="{{projectInfo.url}}">Live Test</a>
                 </div>
 
                 @if(projectInfo.webflow) {
