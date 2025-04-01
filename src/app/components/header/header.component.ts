@@ -2,6 +2,7 @@ import { Component, HostListener, ViewChild, ElementRef} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 
+
 @Component({
   selector: 'app-header',
   standalone: true,
@@ -22,6 +23,8 @@ export class HeaderComponent{
   //hostlistener variables
   @ViewChild('mobileMenu') mobileMenu!: ElementRef;
 
+  @ViewChild('desktopHeader') desktopHeader!: ElementRef;
+
   @HostListener('window:resize', ['$event'])
   onResize(event: Event) {    
     this.windowWidth = window.innerWidth;
@@ -38,6 +41,11 @@ export class HeaderComponent{
   onWindowScroll(event: Event) {
     this.showHeaderLogic()
     this.lookIfViewIsOnTopOfDom()
+    if(!this.domTop){
+      this.desktopHeader.nativeElement.classList.remove('border-radius-if-vp-is-top');
+    } else if(this.domTop) {
+      this.desktopHeader.nativeElement.classList.add('border-radius-if-vp-is-top');
+    }
   }
 
   //conpmonent functions

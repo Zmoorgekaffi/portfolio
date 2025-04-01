@@ -8,7 +8,7 @@
     class="d-flex"
 >
 
-    <nav class="nav-links-frame max-width padding-inline">
+    <nav #desktopHeader [ngClass]="{'border-radius-if-vp-is-top': windowWidth > 1499}" class="nav-links-frame border-radius-if-vp-is-top max-width padding-inline max-width">
         <a href="/" class="logo d-flex">
             <span class="font32">
                 <span class="color-purple">A</span>NDR<span class="color-green">E</span>

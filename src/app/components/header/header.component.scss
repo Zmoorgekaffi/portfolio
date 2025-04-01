@@ -12,12 +12,19 @@ section {
 .nav-links-frame {
     position: relative;
     width: 100%;
+    background-color: rgb(79,99,139);
+    transition: border-radius 200ms ease-in-out;
     @include d-flex(space-between);
     padding-block: 1rem;
     .nav-links {
         @include d-flex();
         gap: 1rem;
     }
+}
+
+.border-radius-if-vp-is-top {
+    border-top-left-radius: 3.125rem;
+    border-top-right-radius: 3.125rem;
 }
 
 .burger-menu {
@@ -118,13 +125,6 @@ a:hover {
 }
 
 // component specific media
-@media (max-width: 1500px) {
-
-    .nav-links-frame {
-        padding-bottom: 0;
-    }
-}
-
 @media (max-width: 860px) {
     .nav-links {
         display: none!important;
