@@ -54,6 +54,27 @@ section {
     .sm-wrap {
         gap: 1.5rem;
     }
+
+    .footer-content-wrap {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .gap {
+        gap: 0.5rem;
+    }
+
+    .order1 {
+        order: 1;
+    }
+
+    .order2 {
+        order: 2;
+    }
+    
+    .order3 {
+        order: 3;
+    }
 }
 
 @media (max-width: 540px) {

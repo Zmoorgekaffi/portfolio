@@ -5,8 +5,8 @@ import { SkillsComponent } from '../skills/skills.component';
 import { ScreenshotsWrapComponent } from '../screenshots-wrap/screenshots-wrap.component';
 import { AtfComponent } from '../atf/atf.component';
 import { ContactComponent } from '../contact/contact.component';
-import { FooterComponent } from '../footer/footer.component';
 import { WindowsizeService } from '../../services/windowsize.service';
+import { FooterComponent } from '../footer/footer.component';
 
 @Component({
   selector: 'app-maincontent',
