@@ -1,5 +1,9 @@
 @import './../../../styles.scss';
 
+section {
+    min-height: calc(100vh - var(--sectionPadding));
+}
+
 .order-2 {
     order: -1;
 }
