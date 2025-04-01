@@ -26,13 +26,13 @@
                         class="w100 input-field" 
                         name="name" 
                         type="text"
-                        required minlength="1" 
+                        required minlength="3" 
                         placeholder="Your name" 
-                        pattern="[a-zA-Z\s]+"
+                        pattern="^(?!.*\s{2,}).*$"
                     >
 
                  @if(name.invalid && name.touched){
-                        <p class="animation-valdiationMessage" style="color: red;"> Gebe deinen Namen ein. </p>
+                        <p required class="animation-valdiationMessage" style="color: red;"> Enter your name. Make sure that there are no two spaces next to each other. </p>
                     }
                 </div>
 
@@ -51,7 +51,7 @@
                     >
 
                     @if(email.invalid && email.touched){
-                        <p class="animation-valdiationMessage" style="color: red;"> Gebe deine korrekte Email Adresse ein. </p>
+                        <p class="animation-valdiationMessage" style="color: red;"> Enter your correct email address. </p>
                     }
                 </div>
 
@@ -80,7 +80,7 @@
                                 </div>
                             </div>
                         </label>
-                        <p class="font14">I've read the <span class="color-purple">privacy policy</span> 
+                        <p class="font14">I've read the <a (click)="routeToImprint()" class="color-purple impressum_link">privacy policy</a> 
                             and agree to the
                             processing of my data as outlined.
                         </p>
@@ -88,8 +88,7 @@
 
                     @if(checkbox.invalid && checkbox.touched){
                         <p class="animation-valdiationMessage" style="color: red;"> 
-                            Lese die Datenschutz Bedingungen und
-                            aktzeptiere sie um das Formular abschicken zu können. 
+                            Read the privacy policy and accept it to be able to submit the form. 
                         </p>
                     }
                 </div>

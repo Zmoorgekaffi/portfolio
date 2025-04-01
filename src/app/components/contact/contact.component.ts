@@ -2,6 +2,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component,  ViewChild, inject, ElementRef, viewChild } from '@angular/core';
 import { NgModel, FormsModule, NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 
 //interfaces
 interface FormData {
@@ -45,6 +46,8 @@ export class ContactComponent {
   formData:{} = {};
   submitted:boolean = false;
 
+  constructor(private router: Router){}
+
   post: Post = {
     endPoint: '',
     body: {},
@@ -55,6 +58,10 @@ export class ContactComponent {
       },
     },
   };
+
+  routeToImprint() {
+    this.router.navigateByUrl('/imprint');
+  }
 
   submitData(contactForm: NgForm) {
     if(contactForm.submitted && contactForm.valid) {

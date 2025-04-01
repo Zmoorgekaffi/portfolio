@@ -116,6 +116,15 @@ input[type="checkbox"]:checked + .checkbox .checkobox-icon-wrap {
     @include d-flex($ai: end)
 }
 
+.impressum_link {
+    transition: color 200ms;
+    cursor: pointer;
+
+    &:hover {
+        color: $green!important;
+    }
+}
+
 @keyframes valdiationMessage {
     0% {
         opacity: 0;
