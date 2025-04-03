@@ -2,12 +2,22 @@
     <div class="site-padding impressum_contain w100">
         <div class="impressum_content">
             <h1 class="impressum_title font32">
+                @if (translateService.language === 'en') {
                 Imprint
+                }
+                @else if (translateService.language === 'de') {
+                Impressum
+                }
             </h1>
 
             <div class="impressum_item_contain">
                 <h2 class="font23 impressum_sub-title">
+                    @if (translateService.language === 'en') {
                     Name & Address
+                    }
+                    @else if (translateService.language === 'de') {
+                    Name & Adresse
+                    }
                 </h2>
 
                 <p class="font16">
@@ -23,13 +33,23 @@
                 </p>
 
                 <p class="font16">
+                    @if (translateService.language === 'en') {
                     Switzerland
+                    }
+                    @else if (translateService.language === 'de') {
+                    Schweiz
+                    }
                 </p>
             </div>
 
             <div class="impressum_item_contain">
                 <h2 class="font23 impressum_sub-title">
+                    @if (translateService.language === 'en') {
                     Contact options
+                    }
+                    @else if (translateService.language === 'de') {
+                    Kontakt Optionen
+                    }
                 </h2>
 
                 <a href="andre.karyoti@outlook.de" class="font16 impressum_link">
@@ -43,7 +63,12 @@
 
             <div class="impressum_item_contain">
                 <h2 class="font23 impressum_sub-title">
+                    @if (translateService.language === 'en') {
                     Responsible for the content
+                    }
+                    @else if (translateService.language === 'de') {
+                    Verantwortlich für den Inhalt
+                    }
                 </h2>
 
                 <p class="font16">
@@ -53,41 +78,99 @@
 
             <div class="impressum_item_contain">
                 <h2 class="font23 impressum_sub-title">
+                    @if (translateService.language === 'en') {
                     Disclaimer
+                    }
+                    @else if (translateService.language === 'de') {
+                    Haftungsausschluss
+                    }
                 </h2>
 
                 <p class="font16">
-                    The contents of this website have been created with the greatest possible care. 
+                    @if (translateService.language === 'en') {
+                    The contents of this website have been created with the greatest possible care.
                     <br>
-                    Use of the website and its contents is at your own risk.  
+                    Use of the website and its contents is at your own risk.
                     <br>
                     <br>
-                    I assume no liability for material or immaterial damages resulting from access to, use or non-use of the published information, or from misuse of the connection.
+                    I assume no liability for material or immaterial damages resulting from access to, use or non-use of
+                    the published information, or from misuse of the connection.
                     <br>
-                    This website may contain links to external third-party websites, over whose content I have no control. 
+                    This website may contain links to external third-party websites, over whose content I have no
+                    control.
                     <br>
-                    The respective provider or operator is solely responsible for the content of the linked pages. At the time of linking, these were checked for possible legal violations.
+                    The respective provider or operator is solely responsible for the content of the linked pages. At
+                    the time of linking, these were checked for possible legal violations.
                     <br>
-                    However, continuous content monitoring of the linked pages is not reasonable without specific indications of a legal violation.  
+                    However, continuous content monitoring of the linked pages is not reasonable without specific
+                    indications of a legal violation.
+                    }
+                    @else if (translateService.language === 'de') {
+                    Die Inhalte dieser Website wurden mit grösstmöglicher Sorgfalt erstellt.
+                    <br>
+                    Die Nutzung der Website und ihrer Inhalte erfolgt auf eigene Gefahr.
+                    <br>
+                    <br>
+                    Ich übernehme keine Haftung für materielle oder immaterielle Schäden, die durch den Zugriff auf, die
+                    Nutzung oder Nichtnutzung der veröffentlichten Informationen oder durch Missbrauch der Verbindung
+                    entstehen.
+                    <br>
+                    Diese Website kann Links zu externen Websites Dritter enthalten, auf deren Inhalte ich keinen
+                    Einfluss habe.
+                    <br>
+                    Für die Inhalte der verlinkten Seiten ist ausschliesslich der jeweilige Anbieter oder Betreiber
+                    verantwortlich. Zum Zeitpunkt der Verlinkung wurden diese auf mögliche Rechtsverstösse überprüft.
+                    <br>
+                    Eine kontinuierliche inhaltliche Überprüfung der verlinkten Seiten ist jedoch ohne konkrete Hinweise
+                    auf eine Rechtsverletzung nicht zumutbar.
+                    }
                 </p>
             </div>
 
             <div class="impressum_item_contain">
                 <h2 class="font23 impressum_sub-title">
+                    @if (translateService.language === 'en') {
                     Copyright
+                    }
+                    @else if (translateService.language === 'de') {
+                    Urheberrecht
+                    }
                 </h2>
-                
+
                 <p class="font16">
-                    The content, texts, images, and works published on this website are subject to Swiss copyright law.  
+                    @if (translateService.language === 'en') {
+                    The content, texts, images, and works published on this website are subject to Swiss copyright law.
                     <br>
-                    Reproduction, modification, distribution, or any form of use beyond the limits of copyright law requires prior written permission from the respective author or creator.  
+                    Reproduction, modification, distribution, or any form of use beyond the limits of copyright law
+                    requires prior written permission from the respective author or creator.
                     <br>
                     <br>
-                    Downloads and copies of this website are only permitted for private, non-commercial use.  
+                    Downloads and copies of this website are only permitted for private, non-commercial use.
                     <br>
-                    If any content on this site was not created by me, the copyrights of third parties are respected.  
+                    If any content on this site was not created by me, the copyrights of third parties are respected.
                     <br>
-                    If you nevertheless become aware of a copyright infringement, please provide a corresponding notice so that the affected content can be removed immediately.  
+                    If you nevertheless become aware of a copyright infringement, please provide a corresponding notice
+                    so that the affected content can be removed immediately.
+                    }
+                    @else if (translateService.language === 'de') {
+                    "Die auf dieser Website veröffentlichten Inhalte, Texte, Bilder und Werke unterliegen dem
+                    schweizerischen Urheberrecht.
+                    <br>
+                    Die Vervielfältigung, Bearbeitung, Verbreitung oder jegliche Nutzung über die Grenzen des
+                    Urheberrechts hinaus
+                    erfordert die vorherige schriftliche Zustimmung des jeweiligen Autors oder Erstellers.
+                    <br>
+                    <br>
+                    Downloads und Kopien dieser Website sind nur für den privaten, nicht kommerziellen Gebrauch
+                    gestattet.
+                    <br>
+                    Falls Inhalte auf dieser Website nicht von mir erstellt wurden, werden die Urheberrechte Dritter
+                    beachtet.
+                    <br>
+                    Solltest du dennoch auf eine Urheberrechtsverletzung aufmerksam werden, bitte ich um einen
+                    entsprechenden Hinweis,
+                    damit die betroffenen Inhalte umgehend entfernt werden können.
+                    }
                 </p>
             </div>
         </div>
