@@ -16,10 +16,28 @@
         </a>
         <div class="d-flex" style="gap: 1rem;">
             <div class="nav-links">
-                <a (click)="scrollTo('about-me')" class="font23">About me</a>
-                <a (click)="scrollTo('my-skills')" class="font23">Skills</a>
-                <a (click)="scrollTo('portfolio')" class="font23">Portfolio</a>
-                <a (click)="scrollTo('contact')" class="font23">Contact</a>
+                <a (click)="scrollTo('about-me')" class="font23">
+                    @if (translateService.language === 'en') {
+                        About me
+                    } 
+                    @else if (translateService.language === 'de') {
+                        Über mich
+                    } 
+                </a>
+                <a (click)="scrollTo('my-skills')" class="font23">
+                    Skills 
+                </a>
+                <a (click)="scrollTo('portfolio')" class="font23">
+                    Portfolio
+                </a>
+                <a (click)="scrollTo('contact')" class="font23">
+                    @if (translateService.language === 'en') {
+                        Contact
+                    } 
+                    @else if (translateService.language === 'de') {
+                        Kontakt
+                    } 
+                </a>
             </div>
             <div class="d-flex" style="gap: 0.5rem;">
                 <p (click)="translateService.changeLanguage('en')" [ngClass]="{'activatedLang': translateService.language == 'en'}" class="font23 link">
@@ -38,10 +56,28 @@
         
         <div #mobileMenu class="mobile-nav-links-frame d-none"  #mobileNavLinks>
             <div>
-                <a (click)="scrollTo('about-me')" class="font23">About me</a>
-                <a (click)="scrollTo('my-skills')" class="font23">Skills</a>
-                <a (click)="scrollTo('portfolio')" class="font23">Portfolio</a>
-                <a (click)="scrollTo('contact')" class="font23">Contact</a>
+                <a (click)="scrollTo('about-me')" class="font23">
+                    @if (translateService.language === 'en') {
+                        About me
+                    } 
+                    @else if (translateService.language === 'de') {
+                        Über mich
+                    } 
+                </a>
+                <a (click)="scrollTo('my-skills')" class="font23">
+                    Skills
+                </a>
+                <a (click)="scrollTo('portfolio')" class="font23">
+                    Portfolio
+                </a>
+                <a (click)="scrollTo('contact')" class="font23">
+                    @if (translateService.language === 'en') {
+                        Contact
+                    } 
+                    @else if (translateService.language === 'de') {
+                        Kontakt
+                    } 
+                </a>
             </div>
         </div>
     </nav>
