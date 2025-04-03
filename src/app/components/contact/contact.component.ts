@@ -108,7 +108,7 @@ export class ContactComponent {
 
   setUpPost() {
     this.post = {
-      endPoint: 'http://andre-karyoti.com/sendMail.php',
+      endPoint: 'https://andre-karyoti.com/sendMail.php',
       body: (payload: any) => JSON.stringify(payload),
       options: {
         headers: {
