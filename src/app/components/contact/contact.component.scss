@@ -125,6 +125,23 @@ input[type="checkbox"]:checked + .checkbox .checkobox-icon-wrap {
     }
 }
 
+.scrollTopBtn {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    padding: 0.5rem;
+    @include d-flex();
+    color: white;
+    border: white 1px solid;
+    transition: border-color ease-in-out 200ms, color ease-in-out 200ms;
+    cursor: pointer;
+
+    &:hover {
+        border-color: $green;
+        color: $green;
+    }
+}
+
 @keyframes valdiationMessage {
     0% {
         opacity: 0;

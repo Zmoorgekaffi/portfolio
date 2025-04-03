@@ -29,9 +29,10 @@
                         required minlength="3" 
                         placeholder="Your name" 
                         pattern="^(?!.*\s{2,}).*$"
+                        (keydown)="checkIfInputIsValid('name')"
                     >
 
-                 @if(name.invalid && name.touched){
+                 @if(name.invalid && name.touched || submitBtnWasClickedWithEmptyValuesForName){
                         <p required class="animation-valdiationMessage" style="color: red;"> Enter your name. Make sure that there are no two spaces next to each other. </p>
                     }
                 </div>
@@ -48,9 +49,10 @@
                         required minlength="5" 
                         placeholder="Your email" 
                         pattern="[^@ \t\r\n]+@[^@ \t\r\n]+\.[a-zA-Z]{2,}"
+                        (keydown)="checkIfInputIsValid('email')"
                     >
 
-                    @if(email.invalid && email.touched){
+                    @if(email.invalid && email.touched || submitBtnWasClickedWithEmptyValuesForEmail){
                         <p class="animation-valdiationMessage" style="color: red;"> Enter your correct email address. </p>
                     }
                 </div>
@@ -68,7 +70,7 @@
                 <div style="gap: 0.5rem;" class="w100 input-container column">
                     <div class="checkbox-wrap gap-05">
                         <label for="checkbox" class="custom-checkbox">
-                            <input ngModel #checkbox="ngModel" id="checkbox" name="checkbox" type="checkbox" required>
+                            <input (click)="checkIfInputIsValid('checkbox')" ngModel #checkbox="ngModel" id="checkbox" name="checkbox" type="checkbox" required>
 
                             <div class="checkbox">
                                 <div class="checkobox-icon-wrap">
@@ -86,7 +88,7 @@
                         </p>
                     </div>
 
-                    @if(checkbox.invalid && checkbox.touched){
+                    @if(checkbox.invalid && checkbox.touched || submitBtnWasClickedWithEmptyValuesForCheckbox){
                         <p class="animation-valdiationMessage" style="color: red;"> 
                             Read the privacy policy and accept it to be able to submit the form. 
                         </p>
@@ -110,6 +112,12 @@
                 </div>
             }
         </form>
-
+    </div>
+    <div class="w100 padding-inline d-flex" style="justify-content: end; padding-top: 5rem;">
+        <div (click)="scrollToTop()" class="scrollTopBtn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5"/>
+            </svg>
+        </div>
     </div>
 </section>

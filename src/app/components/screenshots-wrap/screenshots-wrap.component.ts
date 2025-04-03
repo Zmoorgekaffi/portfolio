@@ -28,7 +28,7 @@ export class ScreenshotsWrapComponent {
       tech: 'JavaScript | HTML | CSS',
       description: 'A simple Jump-and-Run game based on an object-oriented approach. \
                     Help Pepe to find coins and salsa bottles to fight against the big chicken.',
-      url: 'https://andre-karyoti.developerakademie.net/projekte/el%20pollo%20locco/index.html',
+      url: 'https://andre-karyoti.com/el-pollo-locco',
       github:'https://github.com/Zmoorgekaffi/el-pollo-locco',
     },
     {
@@ -36,7 +36,7 @@ export class ScreenshotsWrapComponent {
       title: 'Pokedex',
       tech: 'JavaScript | HTML | CSS | Api',
       description: 'Based on the PokéAPI a simple library that provides and catalogues pokemon information.',
-      url: 'https://andre-karyoti.developerakademie.net/modul9/pokedex/index.html',
+      url: 'https://andre-karyoti.com/pokedex/',
       github:'https://github.com/Zmoorgekaffi/pokedex',
     },
     {

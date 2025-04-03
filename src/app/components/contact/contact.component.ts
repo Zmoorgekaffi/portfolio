@@ -45,6 +45,10 @@ export class ContactComponent {
   http = inject(HttpClient);
   formData:{} = {};
   submitted:boolean = false;
+  
+  submitBtnWasClickedWithEmptyValuesForName:boolean = false;
+  submitBtnWasClickedWithEmptyValuesForEmail:boolean = false;
+  submitBtnWasClickedWithEmptyValuesForCheckbox:boolean = false;
 
   constructor(private router: Router){}
 
@@ -81,7 +85,9 @@ export class ContactComponent {
     } 
 
     else {
-      alert('Please fill out the required fields to submit');
+      this.submitBtnWasClickedWithEmptyValuesForName = true;
+      this.submitBtnWasClickedWithEmptyValuesForEmail = true;
+      this.submitBtnWasClickedWithEmptyValuesForCheckbox = true;
     }
   }
 
@@ -108,5 +114,33 @@ export class ContactComponent {
         },
       },
     }
+  }
+
+  checkIfInputIsValid(inputCategory:string) {
+    switch (inputCategory) {
+      case 'name':
+        if(this.nameInput.valid) {
+          this.submitBtnWasClickedWithEmptyValuesForName = false;
+        }
+        break;
+      case 'email':
+        if(this.emailInput.valid) {
+          this.submitBtnWasClickedWithEmptyValuesForEmail = false;
+        }
+        break;
+      case 'checkbox':
+        setTimeout(() => {
+          if(this.checkboxInput.valid) {
+            this.submitBtnWasClickedWithEmptyValuesForCheckbox = false;
+          }
+        }, 10);
+        break;
+      default:
+        break;
+    }
+  }
+  
+  scrollToTop() {
+    window.scrollTo({ top: 0, behavior: "smooth" });
   }
 }
