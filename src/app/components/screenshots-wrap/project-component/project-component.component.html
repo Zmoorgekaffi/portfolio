@@ -6,7 +6,14 @@
         <div class="description-frame mobile-desc-1">
             <h3 class="project-title font32">{{projectInfo.title}}</h3>
             <p class="project-tech font23">{{projectInfo.tech}}</p>
-            <p class="description">{{projectInfo.description}}</p>
+            <p class="description">
+                @if (translateService.language === 'en') {
+                    {{projectInfo.description}}
+                } 
+                @else if (translateService.language === 'de') {
+                    {{projectInfo.descriptionDe}}
+                }
+            </p>
             <div class="w100 d-flex" style="margin-top: 1rem;">
                 <div style="width: 50%" class="mobile-dflex">
                     <a class="button_secondary" target="_blank" href="{{projectInfo.url}}">Live Test</a>
@@ -32,7 +39,14 @@
         <div class="description-frame mobile-desc-2">
             <h3 class="project-title font32">{{projectInfo.title}}</h3>
             <p class="project-tech font23">{{projectInfo.tech}}</p>
-            <p class="description" style="text-align: right;">{{projectInfo.description}}</p>
+            <p class="description" style="text-align: right;">
+                @if (translateService.language === 'en') {
+                    {{projectInfo.description}}
+                } 
+                @else if (translateService.language === 'de') {
+                    {{projectInfo.descriptionDe}}
+                }
+            </p>
             <div class="w100 d-flex" style="margin-top: 1rem;">
                 <div style="width: 50%; justify-content: end;" class="d-flex mobile-dflex">
                     <a class="button_secondary" target="_blank" href="{{projectInfo.url}}">Live Test</a>

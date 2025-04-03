@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component,  ViewChild, inject, ElementRef, viewChild } from '@angular/core';
 import { NgModel, FormsModule, NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
+import { TranslateServiceService } from '../../services/translate-service.service';
 
 //interfaces
 interface FormData {
@@ -41,6 +42,8 @@ export class ContactComponent {
   @ViewChild('email') emailInput!: NgModel;
   @ViewChild('message') messageInput!: NgModel;
   @ViewChild('checkbox') checkboxInput!: NgModel;
+
+  translateService = inject(TranslateServiceService);
 
   http = inject(HttpClient);
   formData:{} = {};

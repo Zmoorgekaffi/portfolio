@@ -3,7 +3,14 @@
         <div (click)="ScrollToElementId('main')" class="logo d-flex order2">
             <span class="font32 d-flex column gap">
                 <div><span class="color-purple">A</span>NDR<span class="color-green">E</span></div>
-                <a class="impressum_link font16" (click)="routeToImprint()">Imprint</a>
+                <a class="impressum_link font16" (click)="routeToImprint()">
+                    @if (translateService.language === 'en') {
+                        Imprint
+                    } 
+                    @else if (translateService.language === 'de') {
+                        Impressum
+                    } 
+                </a>
             </span>
         </div>
 

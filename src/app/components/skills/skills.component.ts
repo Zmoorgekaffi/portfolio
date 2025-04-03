@@ -1,4 +1,6 @@
-import { Component} from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { TranslateServiceService } from '../../services/translate-service.service';
+
 
 @Component({
   selector: 'app-skills',
@@ -22,7 +24,10 @@ export class SkillsComponent {
     'assets/imgs/icons/skills/scrum.svg',
     'assets/imgs/icons/skills/webflow.svg',
   ];
+
+  translateService = inject(TranslateServiceService);
+
+  description:string = 'I have gained experience in building projects with various front end technologies and concepts.';
+  descriptionDe:string = 'Ich habe Erfahrung in der Entwicklung von Projekten mit verschiedenen Frontend-Technologien und Konzepten gesammelt.';
   
-
-
 }

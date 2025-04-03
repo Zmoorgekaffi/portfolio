@@ -14,19 +14,36 @@
     
     <div class="skills_sub-container d-flex text-align-right">
         <div class="d-flex title_frame">
-            <h2 class="title font90">My Skills</h2>  
+            <h2 class="title font90">
+                @if (translateService.language === 'en') {
+                    My Skills
+                } 
+                @else if (translateService.language === 'de') {
+                    Meine Skills
+                }
+            </h2>  
             <div class="title_stroke"></div>
         </div>
 
         <div>
             <p class="description">
-                I have gained experience in building projects with various front end technologies and concepts.
+                @if (translateService.language === 'en') {
+                    {{description}}
+                } 
+                @else if (translateService.language === 'de') {
+                    {{descriptionDe}}
+                }
             </p>
         </div>
 
         <div class="w100" style="margin-inline: auto;">
             <a href="#contact" class="button_primary">
-                Get in touch
+                @if (translateService.language === 'en') {
+                    Get in Touch
+                } 
+                @else if (translateService.language === 'de') {
+                    Kontaktiere mich
+                }
             </a>
         </div>
         

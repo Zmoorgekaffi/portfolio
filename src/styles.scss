@@ -231,6 +231,19 @@ h2 {
   cursor: pointer;
 }
 
+.link {
+  transition: color 200ms;
+  cursor: pointer;
+
+  &:hover {
+      color: $purple;
+  }
+}
+
+.activatedLang {
+  color: $green!important;
+}
+
 .main-content {
   @include d-flex();
   flex-direction: column;

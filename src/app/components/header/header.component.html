@@ -14,13 +14,28 @@
                 <span class="color-purple">A</span>NDR<span class="color-green">E</span>
             </span>
         </a>
-        <div class="nav-links">
-            <a (click)="scrollTo('about-me')" class="font23">About me</a>
-            <a (click)="scrollTo('my-skills')" class="font23">Skills</a>
-            <a (click)="scrollTo('portfolio')" class="font23">Portfolio</a>
-            <a (click)="scrollTo('contact')" class="font23">Contact</a>
+        <div class="d-flex" style="gap: 1rem;">
+            <div class="nav-links">
+                <a (click)="scrollTo('about-me')" class="font23">About me</a>
+                <a (click)="scrollTo('my-skills')" class="font23">Skills</a>
+                <a (click)="scrollTo('portfolio')" class="font23">Portfolio</a>
+                <a (click)="scrollTo('contact')" class="font23">Contact</a>
+            </div>
+            <div class="d-flex" style="gap: 0.5rem;">
+                <p (click)="translateService.changeLanguage('en')" [ngClass]="{'activatedLang': translateService.language == 'en'}" class="font23 link">
+                    EN
+                </p>
+                <p class="font23">
+                    |
+                </p>
+                <p (click)="translateService.changeLanguage('de')" [ngClass]="{'activatedLang': translateService.language == 'de'}" class="font23 link">
+                    DE
+                </p>
+            </div>
+            <img class="burger-menu" src="assets/imgs/icons/burger-menu.png" alt="" (click)="toggleMobileNav()">
         </div>
-        <img class="burger-menu" src="assets/imgs/icons/burger-menu.png" alt="" (click)="toggleMobileNav()">
+ 
+        
         <div #mobileMenu class="mobile-nav-links-frame d-none"  #mobileNavLinks>
             <div>
                 <a (click)="scrollTo('about-me')" class="font23">About me</a>

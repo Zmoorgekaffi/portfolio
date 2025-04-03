@@ -1,15 +1,51 @@
 <section id="contact" class="block-padding">
     <div style="margin-bottom: 4rem;" class="section-header">
         <div class="violet-stick"></div>
-        <h2 class="font90">Contact</h2>
+        <h2 class="font90">
+            @if (translateService.language === 'en') {
+                Contact
+            } 
+            @else if (translateService.language === 'de') {
+                Kontakt
+            }
+        </h2>
     </div>
     <div class="contact-form-frame padding-inline">
         <div class="contact-info-contain column w50">
-            <h3 class="font32 padding-bottom-1rem">Got a problem to solve?</h3>
-            <p class="margin-bottom font16">Contact me through this form, I am interested in hearing from you, knowing
+            <h3 class="font32 padding-bottom-1rem">
+                @if (translateService.language === 'en') {
+                    Got a problem to solve?
+                } 
+                @else if (translateService.language === 'de') {
+                    Gibt es ein Problem zu lösen?
+                }
+            </h3>
+            <p class="margin-bottom font16">
+                @if (translateService.language === 'en') {
+                    Contact me through this form, I am interested in hearing from you, knowing
                 your
-                ideas and contributing to your projects with my work.</p>
-            <p>Need a Frontend developer? <b>Contact me!</b></p>
+                ideas and contributing to your projects with my work.
+                } 
+                @else if (translateService.language === 'de') {
+                    Kontaktiere mich über dieses Formular - ich freue mich darauf, von dir zu hören, deine Ideen kennenzulernen und mit meiner Arbeit zu deinen Projekten beizutragen.
+                }
+            </p>
+            <p>
+                @if (translateService.language === 'en') {
+                    Need a Frontend developer? 
+                } 
+                @else if (translateService.language === 'de') {
+                    Brauchst du einen Frontend Entwickler?
+                }
+                <b>
+                    @if (translateService.language === 'en') {
+                        Contact me!
+                    } 
+                    @else if (translateService.language === 'de') {
+                        Kontakiere mich!
+                    }
+                </b>
+            </p>
 
         </div>
 
@@ -33,7 +69,14 @@
                     >
 
                  @if(name.invalid && name.touched || submitBtnWasClickedWithEmptyValuesForName){
-                        <p required class="animation-valdiationMessage" style="color: red;"> Enter your name. Make sure that there are no two spaces next to each other. </p>
+                        <p required class="animation-valdiationMessage" style="color: red;"> 
+                            @if (translateService.language === 'en') {
+                                Enter your name. Make sure that there are no two spaces next to each other.
+                            } 
+                            @else if (translateService.language === 'de') {
+                                Gebe deinen Namen ein. Zwei aufeinanderfolgende Leerzeichen sind nicht erlaubt.
+                            } 
+                        </p>
                     }
                 </div>
 
@@ -53,7 +96,14 @@
                     >
 
                     @if(email.invalid && email.touched || submitBtnWasClickedWithEmptyValuesForEmail){
-                        <p class="animation-valdiationMessage" style="color: red;"> Enter your correct email address. </p>
+                        <p class="animation-valdiationMessage" style="color: red;"> 
+                            @if (translateService.language === 'en') {
+                                Enter your correct email address.
+                            } 
+                            @else if (translateService.language === 'de') {
+                                Gebe deine korrekte Email-Adresse an.
+                            } 
+                        </p>
                     }
                 </div>
 
@@ -82,31 +132,72 @@
                                 </div>
                             </div>
                         </label>
-                        <p class="font14">I've read the <a (click)="routeToImprint()" class="color-purple impressum_link">privacy policy</a> 
-                            and agree to the
-                            processing of my data as outlined.
+                        <p class="font14">
+                            @if (translateService.language === 'en') {
+                                I've read the 
+                            } 
+                            @else if (translateService.language === 'de') {
+                                Ich habe die 
+                            } 
+                            <a (click)="routeToImprint()" class="color-purple impressum_link">
+                                @if (translateService.language === 'en') {
+                                    privacy policy 
+                                } 
+                                @else if (translateService.language === 'de') {
+                                    Datenschutzerklärung  
+                                } 
+                            </a> 
+                            @if (translateService.language === 'en') {
+                                and agree to the
+                                processing of my data as outlined. 
+                            } 
+                            @else if (translateService.language === 'de') {
+                                gelesen und aktzeptiere sie.
+                            } 
                         </p>
                     </div>
 
                     @if(checkbox.invalid && checkbox.touched || submitBtnWasClickedWithEmptyValuesForCheckbox){
                         <p class="animation-valdiationMessage" style="color: red;"> 
-                            Read the privacy policy and accept it to be able to submit the form. 
+                            @if (translateService.language === 'en') {
+                                Read the privacy policy and accept it to be able to submit the form.
+                            } 
+                            @else if (translateService.language === 'de') {
+                                Lies die Datenschutzerklärung und akzeptiere sie, um das Formular absenden zu können. 
+                            }  
                         </p>
                     }
                 </div>
 
                 <div class="d-flex w100 padding-top-1rem">
-                    <button class="button_primary font23" type="submit">Send message :)</button>
+                    <button class="button_primary font23" type="submit">
+                        @if (translateService.language === 'en') {
+                            Send message :)
+                        } 
+                        @else if (translateService.language === 'de') {
+                            Nachricht senden :)
+                        } 
+                    </button>
                 </div>
             }
             @else {
                 <div class="font23 success-message w100 column">
                     <div class="d-flex column">
                         <span class="color-green">
-                            Thank you for reaching out!
+                            @if (translateService.language === 'en') {
+                                Thank you for reaching out!
+                            } 
+                            @else if (translateService.language === 'de') {
+                                Danke für deine Nachricht!
+                            } 
                         </span> 
                         <span class="color-purple">
-                            I'll get back to you as soon as possible.
+                            @if (translateService.language === 'en') {
+                                I'll get back to you as soon as possible.
+                            } 
+                            @else if (translateService.language === 'de') {
+                                Ich melde mich so schnell wie möglich bei dir.
+                            } 
                         </span>
                     </div>
                 </div>

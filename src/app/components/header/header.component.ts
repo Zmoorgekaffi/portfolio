@@ -1,6 +1,7 @@
-import { Component, HostListener, ViewChild, ElementRef} from '@angular/core';
+import { Component, HostListener, ViewChild, ElementRef, inject} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
+import { TranslateServiceService } from '../../services/translate-service.service';
 
 
 @Component({
@@ -19,6 +20,8 @@ export class HeaderComponent{
   domTop:boolean = true;
   
   constructor(private router: Router){}
+
+  translateService = inject(TranslateServiceService);
 
   //hostlistener variables
   @ViewChild('mobileMenu') mobileMenu!: ElementRef;

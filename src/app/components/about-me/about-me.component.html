@@ -1,21 +1,44 @@
 <section id="about-me" class="site-padding">
     <div data-aos="zoom-in" class="about-me_frame width">
         <div class="title_frame">
-            <h2 class="title padding-bottom-1rem">About me</h2>
+            <h2 class="title padding-bottom-1rem">
+
+                @if (translateService.language === 'en') {
+                    About me
+                } 
+                @else if (translateService.language === 'de') {
+                    Über mich
+                }
+            </h2>
             <p class="description">
-                {{intro}}
+                @if (translateService.language === 'en') {
+                    {{intro}}
+                } 
+                @else if (translateService.language === 'de') {
+                    {{introDe}}
+                }
             </p>
         </div>
         <div class="d-flex about-me_div">
             <img src="assets/imgs/icons/gluehbirne.svg" alt="">
             <p class="description">
-                {{introExp}}
+                @if (translateService.language === 'en') {
+                    {{introExp}}
+                } 
+                @else if (translateService.language === 'de') {
+                    {{introExpDe}}
+                }
             </p>
         </div>
         <div class="d-flex about-me_div">
             <img src="assets/imgs/icons/puzzle.svg" alt="">
             <p class="description">
-                {{introFuture}}
+                @if (translateService.language === 'en') {
+                    {{introFuture}}
+                } 
+                @else if (translateService.language === 'de') {
+                    {{introFutureDe}}
+                }
             </p>
         </div>
     </div>
