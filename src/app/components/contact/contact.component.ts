@@ -4,6 +4,7 @@ import { Component,  ViewChild, inject, ElementRef, viewChild } from '@angular/c
 import { NgModel, FormsModule, NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { TranslateServiceService } from '../../services/translate-service.service';
+import { CommonModule } from '@angular/common';
 
 //interfaces
 interface FormData {
@@ -29,7 +30,8 @@ interface Post {
   selector: 'app-contact',
   standalone: true,
   imports: [
-    FormsModule
+    FormsModule,
+    CommonModule
   ],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
@@ -67,7 +69,7 @@ export class ContactComponent {
   };
 
   routeToImprint() {
-    this.router.navigateByUrl('/imprint');
+    this.router.navigateByUrl('/privacy-policy');
   }
 
   submitData(contactForm: NgForm) {
@@ -88,9 +90,12 @@ export class ContactComponent {
     } 
 
     else {
-      this.submitBtnWasClickedWithEmptyValuesForName = true;
-      this.submitBtnWasClickedWithEmptyValuesForEmail = true;
-      this.submitBtnWasClickedWithEmptyValuesForCheckbox = true;
+      // this.submitBtnWasClickedWithEmptyValuesForName = true;
+      // this.submitBtnWasClickedWithEmptyValuesForEmail = true;
+      // this.submitBtnWasClickedWithEmptyValuesForCheckbox = true;
+      this.checkIfInputIsValid('name');
+      this.checkIfInputIsValid('email');
+      this.checkIfInputIsValid('checkbox');
     }
   }
 
@@ -124,17 +129,23 @@ export class ContactComponent {
       case 'name':
         if(this.nameInput.valid) {
           this.submitBtnWasClickedWithEmptyValuesForName = false;
+        } else {
+          this.submitBtnWasClickedWithEmptyValuesForName = true;
         }
         break;
       case 'email':
         if(this.emailInput.valid) {
-          this.submitBtnWasClickedWithEmptyValuesForEmail = false;
+            this.submitBtnWasClickedWithEmptyValuesForEmail = false;
+        } else {
+          this.submitBtnWasClickedWithEmptyValuesForEmail = true;
         }
         break;
       case 'checkbox':
         setTimeout(() => {
           if(this.checkboxInput.valid) {
             this.submitBtnWasClickedWithEmptyValuesForCheckbox = false;
+          } else {
+            this.submitBtnWasClickedWithEmptyValuesForCheckbox = true;
           }
         }, 10);
         break;

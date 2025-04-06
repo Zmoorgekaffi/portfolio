@@ -162,15 +162,13 @@ section {
         gap: 1rem;
     }
 
+    .atf-padding-top {
+        padding-top: calc(var(--sectionPadding) + 2.5rem);
+    }
+
     .atf-subtitle {
         font-size: 3.25rem;
         line-height: 3.55rem;
-    }
-}
-
-@media (max-width:869px) {
-    .atf-padding-top {
-        padding-top: calc(var(--sectionPadding) + 2.5rem);
     }
 }
 

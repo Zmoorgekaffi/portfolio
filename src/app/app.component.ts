@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { WindowsizeService } from './services/windowsize.service';
 import { HeaderComponent } from './components/header/header.component';
+import { TranslateServiceService } from './services/translate-service.service';
+
 
 declare var AOS: any;
 
@@ -16,10 +18,12 @@ declare var AOS: any;
 export class AppComponent implements OnInit{
   title = 'portfolio';
   windowSizeService = inject(WindowsizeService);
-  windowWidthAsNumber = this.windowSizeService.windowWithAsNumber
+  translateService = inject(TranslateServiceService);
+  windowWidthAsNumber = this.windowSizeService.windowWithAsNumber;
 
   ngOnInit():void {
     AOS.init();
+    this.translateService.initLanguageFromLocalStorage();
   }
 }
 

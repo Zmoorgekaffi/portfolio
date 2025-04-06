@@ -52,7 +52,10 @@
                     }
                 </h2>
 
-                <a href="andre.karyoti@outlook.de" class="font16 impressum_link">
+                <a 
+                    href="mailto:andre.karyoti@outlook.de" class="font16 impressum_link"
+                    (click)="$event.stopPropagation()"
+                >
                     andre.karyoti&#64;outlook.de
                 </a>
 

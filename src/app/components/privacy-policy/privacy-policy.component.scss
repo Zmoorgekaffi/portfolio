@@ -1,0 +1,47 @@
+@import './../../../styles.scss';
+
+section {
+    width: 100%;
+    flex-grow: 1;
+}
+
+.privacy-policy_contain {
+    flex-grow: 1;
+}
+
+.privacy-policy_content {
+    padding-top: 1rem;
+    flex-direction: column;
+    @include d-flex($ai:start, $jc: start);
+    gap: 2rem;
+}
+
+.privacy-policy_item_contain {
+    flex-direction: column;
+    @include d-flex($ai:start, $jc: start);
+    gap: 0.8rem;
+}
+
+.privacy-policy_title {
+    font-weight: 500;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 0.3rem;
+}
+
+.privacy-policy_sub-title {
+    font-weight: 300;
+}
+
+.privacy-policy_link {
+    transition: color 200ms;
+
+    &:hover {
+        color: $purple;
+    }
+}
+
+@media (max-width: 991px) {
+    .impressum_content {
+        padding-top: var(--sectionPadding);
+    }   
+}
