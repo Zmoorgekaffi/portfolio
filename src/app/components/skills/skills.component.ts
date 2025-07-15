@@ -27,7 +27,14 @@ export class SkillsComponent {
 
   translateService = inject(TranslateServiceService);
 
-  description:string = 'I have gained experience in building projects with various front end technologies and concepts.';
-  descriptionDe:string = 'Ich habe Erfahrung in der Entwicklung von Projekten mit verschiedenen Frontend-Technologien und Konzepten gesammelt.';
-  
+  description: string = 'I have gained experience in building projects with various front end technologies and concepts.';
+  descriptionDe: string = 'Ich habe Erfahrung in der Entwicklung von Projekten mit verschiedenen Frontend-Technologien und Konzepten gesammelt.';
+
+  scrollToContact() {
+    const contactSection = document.getElementById('contact');
+
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
 }
