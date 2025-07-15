@@ -10,7 +10,7 @@ section {
 }
 
 .privacy-policy_content {
-    padding-top: 1rem;
+    padding-top: var(--sectionPadding);
     flex-direction: column;
     @include d-flex($ai:start, $jc: start);
     gap: 2rem;

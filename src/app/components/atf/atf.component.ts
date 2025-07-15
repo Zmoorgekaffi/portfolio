@@ -73,4 +73,12 @@ export class AtfComponent implements OnInit {
     onResize(event?: Event): void {
       this.viewportWidth = window.innerWidth;
     }
+
+    scrollToContact() {
+      const contactSection = document.getElementById('contact');
+
+      if(contactSection) {
+        contactSection.scrollIntoView({behavior: 'smooth'});
+      }
+    }
   }
